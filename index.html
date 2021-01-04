@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1,p,div{text-align: center;}
+            table,th,td{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+        <title>Sport_Ranking_Models</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color:lightgray">
+        <div>
+            <h1>Sports Ranking Systems</h1>
+            <p> This website displays the ranking of sports teams from graph-based rating systems and non graph-based rating systems. There are currently ratings for: Division 1 College Football, and the English Premier League. I hope to include the 
+                following sports soon: NBA , NHL , MLB , MLS , and the NFL.
+            </p>
+            <a href="#rating_systems">Rating Systems Explained</a>
+        </div>
+        <!-- College Football-->
+        <div>
+            <h1>College Football Rankings</h1>
+            <ul style="list-style-type: none;">  <!-- Delete the style part if I want a bulleted list-->
+                <li> 
+                    <a href="cfb.html">2018-2019</a>
+                </li>
+                
+                <li> 2019-2020 </li>
+                <li> 2020-2021 </li>
+            </ul>
+        </div>
+         <!-- EPL-->
+        <div>
+            <h1>English Premier League</h1>
+        </div>
+        <!-- Explaining Ranking Systems-->
+        <div>
+            <h1> Rating Systems Explained</h1>
+            <a id="rating_systems">  </a> <!-- How To Make a Comment-->
+            <p> Currently 5 different Ranking Models are used, 3 of which are non-graph based and two that are graph-based. The Table
+            below goes over all the benefits and cons of each model.</p>
+            <table style="width:100%">
+                <tr>
+                    <th> </th>
+                    <th> Glicko 2 </th>
+                    <th> Glicko 2 MOV </th>
+                    <th> ELO </th>
+                    <th> ELO MOV </th>
+                    <th> PageRank </th>
+                    <th> BeatGraph </th>
+                </tr>
+                <tr>
+                    <td> Inherent Power 5 Bias? </td>
+                    <td> Yes </td>
+                    <td> Yes </td>
+                    <td> Yes </td>
+                    <td> Yes </td>
+                    <td> No </td>
+                    <td> No </td>
+                </tr>
+                <tr>
+                    <td> Graph-Based? </td>
+                    <td> No </td>
+                    <td> No </td>
+                    <td> No </td>
+                    <td> No </td>
+                    <td> Yes </td>
+                    <td> Yes </td>
+                </tr>
+                <tr>
+                    <td> Uses Margin Of Victory? </td>
+                    <td> No </td>
+                    <td> Yes </td>
+                    <td> No </td>
+                    <td> Yes </td>
+                    <td> No </td>
+                    <td> No </td>
+                </tr>                  
+            </table>
+        </div>
+        
+    </body>
+</html>
