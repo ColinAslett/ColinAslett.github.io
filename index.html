@@ -2,84 +2,125 @@
 <html>
     <head>
         <style>
-            h1,p,div{text-align: center;}
+            h1,p,div{
+				text-align: center;
+			}
+			
             table,th,td{
                 border: 1px solid black;
-                border-collapse: collapse;
+                padding: 10px;
             }
+			tr:nth-child(1){
+				background-color: #ff7f50;
+			}
+			tr:nth-child(even){
+				background-color: #f2f2f2;
+			}
+			
+			.class1{
+				
+			}
         </style>
         <title>Sport_Ranking_Models</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body style="background-color:lightgray">
+    <body style="background-color:white">
         <div>
-            <h1>Sports Ranking Systems</h1>
-            <p> This website displays the ranking of sports teams from graph-based rating systems and non graph-based rating systems. There are currently ratings for: Division 1 College Football, and the English Premier League. I hope to include the 
-                following sports soon: NBA , NHL , MLB , MLS , and the NFL.
+            <h1 style="text-align:left">Colin Aslett</h1>
+			<h2 style="text-align:left;font-size: 20px"> Computer Science Student At Whitman College | Graduating December 2021 </h2>
+            <p style = "text-align:left"> Welcome! I am a computer science student with a strong interest in sports analytics and software development. 
+			This website is dedicated to sports analytics of several major league sports[NHL,MLB,NBA,NFL] and Division 1 
+			College Football.
             </p>
-            <a href="#rating_systems">Rating Systems Explained</a>
         </div>
+		
+		<div>
+			<h1 style="text-align:left;font-size: 20px"> Rating Systems Explained </h1>
+			<ul style="text-align:left">
+				<li> ELO: This rating system is well known in the chess world but can be used for any game where there is a winner and loser(draws are allowed). For all major league sports
+				the teams will start a new season at 1500, but each sport has a different K-Value which represents how much change in your rating can occur after a game. A high K-Value means 
+				a lot of change can occur and a low K-Value means little change after one game. For major league sports with a low volume of games(NFL) the K-Value is close to 100, while the K-Value for
+				high volume major league sports is closer to 20.</li>
+				<li> Glicko 2: Explanation Here</li>
+				<li> PageRank: Explanation Here</li>
+				<li> BeatGraph: Explanation Here</li>
+				<li> MOV(Only for ELO & Glicko 2): Explanation Here</li>
+			</ul>
+		</div>
+		
+		<div>
+			<h1 style="text-align:center;font-size: 20px;text-decoration:underline">College Football 2021-2022 Week 0 Match-Up Predictions Using MLR</h1>
+			<p> Nebraska(45%) @ Illinois(55%) </p>
+			<p> UConn(35%) @ Fresno State(65%) </p>
+			<p> Hawaii @ UCLA </p>
+			<p> UTEP @ New Mexico State </p>
+			<p> Southern Utah @ San Jose State </p>
+		</div>
+		
         <!-- College Football-->
-        <div>
-            <h1>College Football Rankings</h1>
-            <ul style="list-style-type: none;">  <!-- Delete the style part if I want a bulleted list-->
-                <li> 
-                    <a href="cfb.html">2018-2019</a>
-                </li>
-                
-                <li> 2019-2020 </li>
-                <li> 2020-2021 </li>
-            </ul>
+        <div class="class1">
+            <h1 style="text-align: center;font-size: 20px;text-decoration:underline">College Football 2020-2021 Season</h1>
+			<table style="width:25%;font-size: 12px;float: left">
+				<tr>
+					<th> TEAM </th>
+					<th> ELO RATING </th>
+				</tr>
+				<tr>
+					<th> TEAM 1 </th>
+					<th> 100.0 </th>
+				</tr>
+				<tr>
+					<th> TEAM 2 </th>
+					<th> 99.0 </th>
+				</tr>
+				<tr>
+					<th> TEAM 3 </th>
+					<th> 98.0 </th>
+				</tr>
+				<tr>
+					<th> TEAM 4 </th>
+					<th> 97.0 </th>
+				</tr>
+			</table>
+			<table style="width:25%;font-size: 12px;float: left">
+				<tr>
+					<th> TEAM </th>
+					<th> GLICKO 2 RATING </th>
+				</tr>
+				<tr>
+					<th> TEAM 1 </th>
+					<th> 100.0 </th>
+				</tr>
+			</table>
+			<table style="width:25%;font-size: 12px;float: left">
+				<tr>
+					<th> TEAM </th>
+					<th> PAGERANK RATING </th>
+				</tr>
+				<tr>
+					<th> TEAM 1 </th>
+					<th> 100.0 </th>
+				</tr>
+			</table>
+			<table style="width:25%;font-size: 12px;float: none">
+				<tr>
+					<th> TEAM </th>
+					<th> BEATGRAPH RATING </th>
+				</tr>
+				<tr>
+					<th> TEAM 1 </th>
+					<th> 100.0 </th>
+				</tr>
+			</table>
         </div>
          <!-- EPL-->
         <div>
-            <h1>English Premier League</h1>
+
         </div>
         <!-- Explaining Ranking Systems-->
         <div>
-            <h1> Rating Systems Explained</h1>
-            <a id="rating_systems">  </a> <!-- How To Make a Comment-->
-            <p> Currently 5 different Ranking Models are used, 3 of which are non-graph based and two that are graph-based. The Table
-            below goes over all the benefits and cons of each model.</p>
-            <table style="width:100%">
-                <tr>
-                    <th> </th>
-                    <th> Glicko 2 </th>
-                    <th> Glicko 2 MOV </th>
-                    <th> ELO </th>
-                    <th> ELO MOV </th>
-                    <th> PageRank </th>
-                    <th> BeatGraph </th>
-                </tr>
-                <tr>
-                    <td> Inherent Power 5 Bias? </td>
-                    <td> Yes </td>
-                    <td> Yes </td>
-                    <td> Yes </td>
-                    <td> Yes </td>
-                    <td> No </td>
-                    <td> No </td>
-                </tr>
-                <tr>
-                    <td> Graph-Based? </td>
-                    <td> No </td>
-                    <td> No </td>
-                    <td> No </td>
-                    <td> No </td>
-                    <td> Yes </td>
-                    <td> Yes </td>
-                </tr>
-                <tr>
-                    <td> Uses Margin Of Victory? </td>
-                    <td> No </td>
-                    <td> Yes </td>
-                    <td> No </td>
-                    <td> Yes </td>
-                    <td> No </td>
-                    <td> No </td>
-                </tr>                  
-            </table>
+			
         </div>
         
     </body>
