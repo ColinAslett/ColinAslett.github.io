@@ -2,395 +2,311 @@
 <html>
     <head>
         <style>
-        	body {
-  				font-family: Garamond, serif;
-			}
+        body {
+  font-family: Garamond, serif;
+}
             table,th,td{
                 border: 1px solid black;
                 border-collapse: collapse;
             }
             th{
-				font-weight: normal;
-			}
-			tr:nth-child(1){
-				background-color: lightcoral;
-			}
-			tr:nth-child(even){
-				background-color: #f2f2f2;
-			}
-			.class1{
-				
-			}
+font-weight: normal;
+}
+tr:nth-child(1){
+background-color: lightcoral;
+}
+tr:nth-child(even){
+background-color: #f2f2f2;
+}
+
+body {font-family:calibri}
+
+.class1{
+
+}
         </style>
-        <title>Sport_Ranking_Models</title>
+        <title>College Football Rating</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body style="background-color:white">
         <div>
-			<img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/1763292%20(2).png" width="250" height="250"  style="float: right" border="0"/>
-            <h1 style="text-align:center;font-size: 36px"> <u> College Football Sports Analytics </u> </h1>
-			<h2 style="text-align:left;font-size: 20px"> Designed by Colin Aslett | Computer Science Student at Whitman College </h2>
-            <p style = "text-align:left"> Hello! I am a Computer Science major who is pursuing a career in software design.
-			I have used several programming languages to create software for school, work and personal projects.
-			In college, I was a varsity athlete and I still follow a disciplined strength and conditioning routine.
-			My interest in sports has created a passion for writing sports analytics software.
-			In my spare time, I also like to analyze no-limit hold'em poker games vs. game theory optimization. 
-            </p>
-            <h3 style="text-align:left;font-size: 20px;"> <u> Portfolio Links/Contact Info </u> </h3>
-            <p> <b> Email: </b> aslettcj@whitman.edu </p>
-            <p> <a href="https://www.linkedin.com/in/colin-aslett-10384a201/"> Linkedin </a> </p>
-            <p> <a href="https://github.com/ColinAslett/CollegeFootballRATINGSystem"> Github </a> </p>
-        </div>
-		
-		<div>
-			<h1 style="text-align:center;font-size: 20px;text-decoration:underline"> Rating Systems Explained </h1>
-			<table style="width: 75%;font-size: 14px;margin-right:auto;margin-left: auto">
-				<tr>
-					<th> <b> Rating Sytem </b> </th>
-					<th> <b> Uses Results From Season </b> </th>
-					<th> <b> Uses Score of Games </b> </th>
-					<th> <b> Uses Game Data(Avg Yards per Drive...) </b> </th>
-					<th> <b> Graph-Based </b> </th>
-					<th> <b> Explanation </b> </th>
-				</tr>
-				<tr>
-					<th> ELO </th>
-					<th> <span> &#10003; </span> </th>
-					<th> X </th>
-					<th> X </th>
-					<th> X </th>
-					<th> <a href="https://en.wikipedia.org/wiki/Elo_rating_system"> Link </a> </th>
-				</tr>
-				<tr>
-					<th> Glicko 2 </th>
-					<th> <span> &#10003; </span> </th>
-					<th> X </th>
-					<th> X </th>
-					<th> X </th>
-					<th> <a href="https://en.wikipedia.org/wiki/Glicko_rating_system"> Link </a> </th>
-				</tr>
-				<tr>
-					<th> ELO/Glicko 2 MOV </th>
-					<th> <span> &#10003; </span> </th>
-					<th> <span> &#10003; </span> </th>
-					<th> X </th>
-					<th> X </th>
-					<th> N/A </th>
-				</tr>
-				<tr>
-					<th> PageRank </th>
-					<th> <span> &#10003; </span> </th>
-					<th> X </th>
-					<th> X </th>
-					<th> <span> &#10003; </span> </th>
-					<th> <a href="https://en.wikipedia.org/wiki/PageRank"> Link </a> </th>
-				</tr>
-				<tr>
-					<th> BeatGraph </th>
-					<th> <span> &#10003; </span> </th>
-					<th> X </th>
-					<th> X </th>
-					<th> <span> &#10003; </span> </th>
-					<th> <a href="http://www.beatgraphs.com/GettingStarted.php"> Link </a> </th>
-				</tr>
-				<tr>
-					<th> MLR </th>
-					<th> <span> &#10003; </span> </th>
-					<th> <span> &#10003; </span> </th>
-					<th> <span> &#10003; </span> </th>
-					<th> <span> &#10003; </span> </th>
-					<th> <a href="https://en.wikipedia.org/wiki/Linear_regression"> Link </th>
-				</tr>
-			</table>
-		</div>
-        <hr style="height:2px;background: black;">
-		<div>
-			<h1 style="text-align:center;font-size: 20px;text-decoration:underline">College Football 2021-2022 Week 0 Match-Up Predictions Using MLR</h1>
-			<p style="text-align: center;font-size: 16px;"> A Multiple Linear Regression(MLR) formula will calculate the percentage odds of a given team winning. The performance of the MLR and other ranking systems is showcased in the section: "Ranking System Performance" near the bottom of the page. This table will be updated weekly before the games begin once the college season begins. <b> Last Updated: 7/12/2021</b> </p>
-			<table style="width: 50%;font-size: 14px;margin-right:auto;margin-left: auto">
-				<tr>
-					<th style="background-color: lightsalmon;"> <b> Home Team </b> </th>
-					<th style="background-color: lightsalmon;"> <b> Win % </b> </th>
-					<th style="background-color: lightsalmon;"> <b> Away Team </b> </th>
-					<th style="background-color: lightsalmon;"> <b> Win % </b> </th>
-				</tr>
-				<tr>
-					<th> Nebraska </th>
-					<th> N/A </th>
-					<th> Illinois </th>
-					<th> N/A </th>
-				</tr>
-				<tr>
-					<th> UConn </th>
-					<th> N/A </th>
-					<th> Fresno State </th>
-					<th> N/A </th>
-				</tr>
-				<tr>
-					<th> Hawaii </th>
-					<th> N/A </th>
-					<th> UCLA </th>
-					<th> N/A </th>
-				</tr>
-				<tr>
-					<th> UTEP </th>
-					<th> N/A </th>
-					<th> New Mexico State </th>
-					<th> N/A </th>
-				</tr>
-				<tr>
-					<th> Southern Utah </th>
-					<th> N/A </th>
-					<th> San Jose State </th>
-					<th> N/A </th>
-				</tr>
-			</table>
-		</div>
-		<hr style="height:2px;background: black;">
+<! <img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/1763292%20(2).png" width="100" height="100"  
+style="float: right" border="0"/>>
+           
+<p style="text-indent: 5px; text-align:center; margin:0; font-size: 42px;background-color:SteelBlue;color:white"> College Football Rating System </p>
+<p style = "text-indent: 5px; text-align:center; margin:0; font-size: 36px;background-color:SteelBlue;color:white"> By Colin Aslett </p>
+<p style = "text-indent: 5px; text-align:center; margin:0; font-size: 18px;background-color:SteelBlue;color:white"> BS Computer Science (Dec. 2021), Whitman College </p>
+<p style = "text-indent: 5px; text-align:center; margin:0; font-size: 18px;background-color:SteelBlue;color:white"> aslettcj@whitman.edu </p>
+
+<h2 style="text-align:center;font-size: 32px"> Introduction </h2>
+
+<p style = "text-align:justify; margin-left: 100px;margin-right:100px"> Hello! I am a Computer Science major who is pursuing a career in software design.
+I have used several programming languages to create software for school, work and personal projects.
+In college, I was a varsity athlete and I still follow a disciplined strength and conditioning routine.
+My interest in sports has created a passion for writing sports analytics software.
+In my spare time, I also like to analyze no-limit hold'em poker games vs. game theory optimization.
+<br/> <br/>
+This website gives examples of the type of results my NCAA Division 1 football rating system generates.
+As described in the readme file for the program in the repository, my program
+reads the results of each NCCA Division 1 college football match during the season from
+<a href="https://collegefootballdata.com/"> collegefootballdata.com</a> and provides a rating and relative
+ranking of each team using five different rating systems. The information below provides a brief comparison of the ratings systems,
+an example of the results after the final week of the 2021 season, and an example of the forecasted win % for upcoming games using MLR.
+The final section is work in progress and will compare the relative performance of each system as more data is obtained.
+
+</p>
+<p style = "text-align:center; margin-left: 100px;margin-right:100px"> Learn more about me here:
+<button type="button"> <a href="https://www.linkedin.com/in/colin-aslett-10384a201/"> LinkedIn </a> </button>
+</p>
+<p style = "text-align:center; margin-left: 100px;margin-right:100px"> The code can be found here:
+<button type="button"> <a href="https://github.com/ColinAslett/CollegeFootballRATINGSystem"> GitHub </a> </button>
+</p>
+  </div>
+
+<hr style="height:2px;background: black;">
+ 
+<div>
+
+
+<h2 style="text-align:center;font-size: 32px"> A Brief Comparison of the Rating Systems Used </h2>
+
+<p style="text-align:justify; margin-left: 100px;margin-right:100px"> <strong>Elo: </strong>
+The Elo rating system is well known for its use in chess. Elo uses the existing rating of the competitors
+and the result of the match to determine each competitor's new Elo rating. The Elo rating for each team starts
+at 1500 at the beginning of the season with a global K-value of 80-100.
+A more detailed description of the Elo rating system can be found here:
+<a href="https://en.wikipedia.org/wiki/Elo_rating_system"> Elo Details </a> </p>
+
+<p style="text-align:justify; margin-left: 100px;margin-right:100px">  <strong>Glicko 2: </strong>
+The Glicko 2 rating system is similar to the Elo system.  The difference is mostly the inclusion of a ratings deviation
+that gives an indication of the reliability of the rating.
+The rating deviation for each team starts at 350 but, as more games are played, Glicko 2 gets more confident and it will decrease.
+A more detailed description of this rating system can be found here:
+<a href="https://en.wikipedia.org/wiki/Glicko_rating_system"> Glicko 2 Details </a> </p>
+
+<p style="text-align:justify; margin-left: 100px;margin-right:100px">  <strong>HITS: </strong>
+Hyperlink-Induced Topic Search (HITS) was originally designed as a link analysis algorithm that rates web pages. I have modified the algorithm
+to rate college football teams.
+A more detailed description of this rating system can be found here:
+<a href="https://en.wikipedia.org/wiki/HITS_algorithm"> HITS Details </a> </p>
+
+<p style="text-align:justify; margin-left: 100px;margin-right:100px">  <strong>PageRank: </strong>
+PageRank was originally developed by Google to rank websites but can be applied to sports as well. As shown in Table 1, it is a graph-based
+rating system and the rating of a team is affected by how the strength of
+their opponents continue to evolve over the course of the season after they have played them.
+A more detailed description of this rating system can be found here:
+<a href="https://en.wikipedia.org/wiki/PageRank"> PageRank Details </a> </p>
+
+<p style="text-align:justify; margin-left: 100px;margin-right:100px">  <strong>BG </strong>
+BG is my interpretation of the BeatGraph system. As shown in Table 1, this is also a graph based rating system. BeatGraph is the only rating system
+I use that purposefully destroys part of the game data in an attempt to create a acyclic graph. In college football this generally results in about 30-40%
+of game data being thrown away. A more detailed description of this rating system can be found here:
+<a href="http://www.beatgraphs.com/GettingStarted.php"> BeatGraph Details </a> </p>
+
+<p style="text-align: center"> <u>Table 1: A Comparison of the Rating Systems </u> </p>
+
+<table style="width: 75%;font-size: 14px;margin-right:auto;margin-left: auto">
+<tr>
+<th> <b> Rating Sytem </b> </th>
+<th> <b> Uses Results From Season </b> </th>
+<th> <b> Uses Score of Games </b> </th>
+<th> <b> Uses Game Data </b> </th>
+<th> <b> Graph-Based </b> </th>
+<th> <b> More Details </b> </th>
+</tr>
+<tr>
+<th> Elo </th>
+<th> <span> &#10003; </span> </th>
+<th> X </th>
+<th> X </th>
+<th> X </th>
+<th> <a href="https://en.wikipedia.org/wiki/Elo_rating_system"> Link </a> </th>
+</tr>
+<tr>
+<th> Glicko 2 </th>
+<th> <span> &#10003; </span> </th>
+<th> X </th>
+<th> X </th>
+<th> X </th>
+<th> <a href="https://en.wikipedia.org/wiki/Glicko_rating_system"> Link </a> </th>
+</tr>
+<tr>
+<th> HITS </th>
+<th> <span> &#10003; </span> </th>
+<th> X </th>
+<th> X </th>
+<th> <span> &#10003; </span> </th>
+<th> <a href="https://en.wikipedia.org/wiki/HITS_algorithm"> Link </a>  </th>
+</tr>
+<tr>
+<th> PageRank </th>
+<th> <span> &#10003; </span> </th>
+<th> X </th>
+<th> X </th>
+<th> <span> &#10003; </span> </th>
+<th> <a href="https://en.wikipedia.org/wiki/PageRank"> Link </a> </th>
+</tr>
+<tr>
+<th> BG </th>
+<th> <span> &#10003; </span> </th>
+<th> X </th>
+<th> X </th>
+<th> <span> &#10003; </span> </th>
+<th> <a href="http://www.beatgraphs.com/GettingStarted.php"> Link </a> </th>
+</tr>
+<tr>
+<th> MLR </th>
+<th> <span> &#10003; </span> </th>
+<th> <span> &#10003; </span> </th>
+<th> <span> &#10003; </span> </th>
+<th> <span> &#10003; </span> </th>
+<th> <a href="https://en.wikipedia.org/wiki/Linear_regression"> Link </th>
+</tr>
+</table>
+</div>
+       
+<hr style="height:2px;background: black;">
+
+<h2 style="text-align:center;font-size: 32px"> An Example using the 2020-2021 Season </h2>
+
         <!-- College Football-->
         <div class="class1">
-            <h1 style="text-align: center;font-size: 20px;text-decoration:underline">College Football 2020-2021 Season(Regular Season Only)</h1>
-			<table style="width: 75%;font-size: 14px;margin-right: auto;margin-left: auto">
-				<tr>
-					<th style="background-color: yellow;"> <b> Team </b> </th>
-					<th style="background-color: yellow;"> <b> ELO </b> </th>
-					<th style="background-color: skyblue;"> <b> Team </b> </th>
-					<th style="background-color: skyblue;"> <b> Glicko </b> </th>
-					<th style="background-color: lawngreen;"> <b> Team </b> </th>
-					<th style="background-color: lawngreen;"> <b> PageRank </b> </th>
-					<th style="background-color: orange;"> <b> Team </b> </th>
-					<th style="background-color: orange;"> <b> BeatGraph </b> </th>
-				</tr>
-				<tr>
-					<th> Coastal Carolina </th>
-					<th> 1857.5 </th>
-					<th> Cincinnati </th>
-					<th> 2092.7 <span>&#177;</span> 149.0 </th>
-					<th> Clemson </th>
-					<th> 423.4 </th>
-					<th> Coastal Carolina </th>
-					<th> 54-0 </th>
-				</tr>
-				<tr>
-					<th> Cincinnati </th>
-					<th> 1829.3 </th>
-					<th> Coastal Carolina </th>
-					<th> 2081.4 <span>&#177;</span> 145.6 </th>
-					<th> Notre Dame </th>
-					<th> 414.7 </th>
-					<th> Oklahoma </th>
-					<th> 50-0 </th>
-				</tr>
-				<tr>
-					<th> Alabama</th>
-					<th> 1825.8 </th>
-					<th> Alabama </th>
-					<th> 2060.4 <span>&#177;</span> 154.0 </th>
-					<th> Ball State </th>
-					<th> 192.5 </th>
-					<th> TCU </th>
-					<th> 48-1 </th>
-				</tr>
-				<tr>
-					<th> Clemson </th>
-					<th> 1799.0 </th>
-					<th> San Jose State </th>
-					<th> 2059.2 <span>&#177;</span> 170.4 </th>
-					<th> Buffalo </th>
-					<th> 175.5 </th>
-					<th> BYU </th>
-					<th> 45-1 </th>
-				</tr>
-				<tr>
-					<th> San Jose State </th>
-					<th> 1777.8 </th>
-					<th> Clemson </th>
-					<th> 2026.4 <span>&#177;</span> 137.6 </th>
-					<th> Miami(OH) </th>
-					<th> 174.8 </th>
-					<th> Texas </th>
-					<th> 45-2 </th>
-				</tr>
-				<tr>
-					<th> BYU </th>
-					<th> 1760.2 </th>
-					<th> Notre Dame </th>
-					<th> 2001.2 <span>&#177;</span> 141.8 </th>
-					<th> Coastal Carolina </th>
-					<th> 151.0 </th>
-					<th> Oklahoma State </th>
-					<th> 44-3 </th>
-				</tr>
-				<tr>
-					<th> Notre Dame </th>
-					<th> 1754.0 </th>
-					<th> Ohio State</th>
-					<th> 1996.4 <span>&#177;</span> 170.7 </th>
-					<th> Oregon </th>
-					<th> 121.4 </th>
-					<th> Cincinnati </th>
-					<th> 39-0 </th>
-				</tr>
-				<tr>
-					<th> Louisiana </th>
-					<th> 1749.8 </th>
-					<th> BYU </th>
-					<th> 1986.1 <span>&#177;</span> 146.2</th>
-					<th> Iowa State </th>
-					<th> 109.7 </th>
-					<th> Clemson </th>
-					<th> 34-0 </th>
-				</tr>
-				<tr>
-					<th> Ohio State </th>
-					<th> 1747.6 </th>
-					<th> Louisiana </th>
-					<th> 1934.8 <span>&#177;</span> 148.6</th>
-					<th> Oklahoma </th>
-					<th> 106.7 </th>
-					<th> Louisiana </th>
-					<th> 34-1 </th>
-				</tr>	
-				//	
-				<tr>
-					<th> Texas A&M </th>
-					<th> 1735.7 </th>
-					<th> Texas A&M </th>
-					<th> 1897.5 <span>&#177;</span> 150.1 </th>
-					<th> Stanford</th>
-					<th> 95.7 </th>
-					<th> Louisiana </th>
-					<th> 34-1 </th>
-				</tr>			
-				<tr>
-					<th> Oklahoma </th>
-					<th> 1733.1 </th>
-					<th> Ball State </th>
-					<th> 1879.1 <span>&#177;</span> 152.5 </th>
-					<th> Oklahoma State </th>
-					<th> 81.6 </th>
-					<th> Louisiana </th>
-					<th> 34-1 </th>
-				</tr>			
-				<tr>
-					<th> Ball State </th>
-					<th> 1728.3 </th>
-					<th> Indiana </th>
-					<th> 1873.6 <span>&#177;</span> 163.4 </th>
-					<th> Utah </th>
-					<th> 80.9 </th>
-					<th> Louisiana </th>
-					<th> 34-1 </th>
-				</tr>		
-				<tr>
-					<th> Army </th>
-					<th> 1705.9 </th>
-					<th> Miami </th>
-					<th> 1869.8 <span>&#177;</span> 141.4 </th>
-					<th> Cincinnati </th>
-					<th> 79.1 </th>
-					<th> Louisiana </th>
-					<th> 34-1 </th>
-				</tr>	
-				<tr>
-					<th> North Carolina </th>
-					<th> 1701.5 </th>
-					<th> North Carolina </th>
-					<th> 1851.8 <span>&#177;</span> 131.7 </th>
-					<th> Louisiana </th>
-					<th> 77.6 </th>
-					<th> Louisiana </th>
-					<th> 34-1 </th>
-				</tr>
-				<tr>
-					<th> Liberty </th>
-					<th> 1684.2 </th>
-					<th> Liberty </th>
-					<th> 1844.5 <span>&#177;</span> 156.9 </th>
-					<th> Oregon State </th>
-					<th> 77.5 </th>
-					<th> Louisiana </th>
-					<th> 34-1 </th>
-				</tr>	
-				<tr>
-					<th> Indiana </th>
-					<th> 1681.5 </th>
-					<th> Oklahoma </th>
-					<th> 1841.0 <span>&#177;</span> 136.4 </th>
-					<th> Alabama </th>
-					<th> 76.3 </th>
-					<th> Louisiana </th>
-					<th> 34-1 </th>
-				</tr>				
-				<tr>
-					<th> NC State </th>
-					<th> 1670.1 </th>
-					<th> Georgia </th>
-					<th> 1827.7 <span>&#177;</span> 144.8 </th>
-					<th> Oklahoma </th>
-					<th> 106.7 </th>
-					<th> Louisiana </th>
-					<th> 34-1 </th>
-				</tr>					
-				<tr>
-					<th> Tulsa </th>
-					<th> 1667.3 </th>
-					<th> Army </th>
-					<th> 1826.7 <span>&#177;</span> 133.6 </th>
-					<th> North Carolina </th>
-					<th> 74.7 </th>
-					<th> Louisiana </th>
-					<th> 34-1 </th>
-				</tr>		
-				<tr>
-					<th> Miami </th>
-					<th> 1663.0 </th>
-					<th> Buffalo </th>
-					<th> 1823.8 <span>&#177;</span> 179.2 </th>
-					<th> Kansas State </th>
-					<th> 71.7 </th>
-					<th> Louisiana </th>
-					<th> 34-1 </th>
-				</tr>
-				<tr>
-					<th> Georgia </th>
-					<th> 1662.0 </th>
-					<th> NC State </th>
-					<th> 1816.6 <span>&#177;</span> 136.7 </th>
-					<th> Ohio State </th>
-					<th> 69.6 </th>
-					<th> Louisiana </th>
-					<th> 34-1 </th>
-				</tr>		
-				<tr>
-					<th> Iowa State </th>
-					<th> 1661.5 </th>
-					<th> Boise State </th>
-					<th> 1799.5 <span>&#177;</span> 164.4 </th>
-					<th> USC </th>
-					<th> 67.1 </th>
-					<th> Louisiana </th>
-					<th> 34-1 </th>
-				</tr>																			
-			</table>
-        </div>
+
+<p style="text-align:justify; margin-left: 100px;margin-right:100px">  
+Table 2 shows the results obtained at the conclusion of the 2020/2021 college footbal regular season based on all of the games played to that point.
+The results for each rating system are listed in their rank order and shown next to each other to make it easy to see the differences.
+The final ranking from the BCS committee is also shown for reference.
+The program generates a rating for all college Div. 1 football teams but only the top 25 for each system are shown in Table 2.
+</p>
+
+<p style="text-align: center"> <u>Table 2: College Football 2020-2021 Season (Regular Season Only) </u> </p>
+
+<p style="text-align:center;"><img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Screen%20Shot%202021-07-22%20at%2011.27.03%20AM.png" width="100%" height="auto"></p>
+
+<p style="text-align:center;"><img src="https://dbukjj6eu5tsf.cloudfront.net/sidearm.sites/collegefootballplayoff.sidearmsports.com/images/2020/12/20/CFP_T25_1920x1080.png" width="100%" height="auto"></p>
         <hr style="height:2px;background: black;">
-        <div>
-            <h1 style="text-align: center;font-size: 20px;text-decoration:underline">Rating System Performance</h1>
-            <p style="text-align: center;font-size: 16px;margin-left: 100px;margin-right:100px"> This section will show how well each rating system predicts the winner of a college football game. The note section is my own opinion on how each rating system is performing, highlighting their weaknesses and strengths. The technical section shows how each rating system is performing from an analytical stanpoint including: brier score, log loss, and lots of graphs.<b> This section is currently under construction. </b>
-            </p>
-            <p style="text-align: center;font-size: 16px;margin-left: 100px;margin-right:100px"> <b> Notes For 2020-2021 Season: </b> With Covid-19 forcing many conferences to only play against teams within the conference the graph-based rating systems suffered. For example, Alabama has a perfect score in the SEC but is ranked lower than other teams that simply played teams outside of their conference. Another challenge for the rating systems this season was that many teams did not play the same number of games, which is crucial when the regular season is only about a dozen games to begin with.  </p>
-        </div>
+
+<div>
+<h2 style="text-align:center;font-size: 32px"> Applying MLR to Predict Game Results </h2>
+
+<p style="text-align:justify; margin-left: 100px;margin-right:100px">  <strong> Win Probabilities using MLR: </strong>
+In addition to providing the relative ranking of college football teams, I will also provide the win probabilities for upcoming games using the
+Multiple Linear Regression(MLR) formula. As shown in Table 3, MLR will use the scores of the past games and game data (like yards per game) to determine the win probabilities
+of a team in a future match. Table 4 shows an example of how I will record the percentage odds of a given team winning their match starting in the 2021/2022 season.
+The table will be updated weekly before the games begin once the college season begins.
+A more detailed description of this rating system can be found here:
+<a href="http://www.beatgraphs.com/GettingStarted.php"> MLR Details </a>
+</p>
+
+<p style="text-align: center"> <u>Table 3: MLR Features </u> </p>
+
+<table style="width: 75%;font-size: 14px;margin-right:auto;margin-left: auto">
+<tr>
+<th> <b> Sytem </b> </th>
+<th> <b> Uses Results From Season </b> </th>
+<th> <b> Uses Score of Games </b> </th>
+<th> <b> Uses Game Data </b> </th>
+<th> <b> Graph-Based </b> </th>
+<th> <b> More Details </b> </th>
+</tr>
+<tr>
+<th> MLR </th>
+<th> <span> &#10003; </span> </th>
+<th> <span> &#10003; </span> </th>
+<th> <span> &#10003; </span> </th>
+<th> <span> &#10003; </span> </th>
+<th> <a href="https://en.wikipedia.org/wiki/Linear_regression"> Link </th>
+</tr>
+</table>
+
+<br/>
+
+<p style="text-align: center"> <u>Table 4: College Football 2021/2022 Week 0 Predictions using MLR </u> </p>
+
+<table style="width: 50%;font-size: 14px;margin-right:auto;margin-left: auto">
+<tr>
+<th style="background-color: lightsalmon;"> <b> Home Team </b> </th>
+<th style="background-color: lightsalmon;"> <b> Win % </b> </th>
+<th style="background-color: lightsalmon;"> <b> Away Team </b> </th>
+<th style="background-color: lightsalmon;"> <b> Win % </b> </th>
+</tr>
+<tr>
+<th> Nebraska </th>
+<th> N/A </th>
+<th> Illinois </th>
+<th> N/A </th>
+</tr>
+<tr>
+<th> UConn </th>
+<th> N/A </th>
+<th> Fresno State </th>
+<th> N/A </th>
+</tr>
+<tr>
+<th> Hawaii </th>
+<th> N/A </th>
+<th> UCLA </th>
+<th> N/A </th>
+</tr>
+<tr>
+<th> UTEP </th>
+<th> N/A </th>
+<th> New Mexico State </th>
+<th> N/A </th>
+</tr>
+<tr>
+<th> Southern Utah </th>
+<th> N/A </th>
+<th> San Jose State </th>
+<th> N/A </th>
+</tr>
+</table>
+
+</div>
+
+<hr style="height:2px;background: black;">
+
+ <div>
+
+<h2 style="text-align:center;font-size: 32px"> Rating System Performance </h2>
+
+<p style="text-align:justify;font-size: 16px;margin-left: 100px;margin-right:100px"> <b> Predicton Accuracy (under construction). </b> This section
+will show how well each rating system predicts the  winner of a college football game. It is still a work in progress.  </p>
+           
+<p style="text-align: justify;font-size: 16px;margin-left: 100px;margin-right:100px"> <b> Notes: </b> The note section will include my own opinion on
+how each rating system is performing, highlighting their weaknesses and strengths. For example, in 2020/2021, with Covid-19 forcing many conferences to
+only play against teams within the conference, the graph-based rating systems suffered. Alabama had a perfect score in the SEC but was ranked lower
+than other teams that simply played teams outside of their conference. Another challenge for the rating systems in the 2020/2021 season was that many
+teams did not play the same number of games, which is crucial when the regular season is only about a dozen games to begin with.  </p>
+       
+<p style="text-align: justify;font-size: 16px;margin-left: 100px;margin-right:100px"> <b> Technical Discussion (under construction): </b> This section
+will show how each rating system is performing from an analytical standpoint. It will include the brier score, log loss, and many graphs. </p>
+
+ </div>
         <hr style="height:2px;background: black;">
 
         <div>
-            <h1 style="text-align: center;font-size: 20px;text-decoration:underline">Other Projects</h1>
-            <h2 style="text-align: center;font-size: 18px"> Weather App </h2>
-            <p style = "text-align: center;margin-left: 100px;margin-right:100px"> This program extracts and interprets raw weather model data from the internet to give weather forecasts for anywhere in the Contential United States. The weather models currently scraped are: NAM,NAMNEST,HRRR,GFS, and RAP. The program specializes in determining whether there is a severe weather threat for a specific area, but also provides a basic forecast including: temperature, precipitation amount, visibility, and many other.</p>
-        	<h3 style="text-align: center;font-size: 18px"> SportsDataExtractor </h3>
-        	<p style = "text-align: center;margin-left: 100px;margin-right:100px"> Extracts data from internet for all major and collegiate sports in the USA. Once the data is extracted it is transformed into an easily readable csv file.</p>
-        </div>
-        
+<h2 style="text-align:center;font-size: 32px"> Other Projects </h2>
+<p style = "text-align: center ;margin-left: 100px;margin-right:100px"> Please contact me if you want to learn more about some other projects I have completed, such as:
+
+<h2 style="text-align: center;font-size: 18px"> Weather App </h2>
+<p style = "text-align: justify ;margin-left: 100px;margin-right:100px"> Extracts and interprets raw weather model data from the
+internet to give weather forecasts for anywhere in the Contential United States. The weather models currently scraped are: NAM,NAMNEST,HRRR,GFS, and RAP. The program specializes in determining whether there is a severe weather
+threat for a specific area, but also provides a basic forecast including: temperature, precipitation amount, visibility, and many other.</p>
+       
+<h3 style="text-align: center;font-size: 18px"> SportsDataExtractor </h3>
+<p style = "text-align: center;margin-left: 100px;margin-right:100px"> Extracts data from internet for all major and collegiate sports in the USA.
+Once the data is extracted it is transformed into an easily readable csv file.</p>
+       
+<h3 style="text-align: center;font-size: 18px"> Project-5-8-teamalpha </h3>
+<p style = "text-align: center;margin-left: 100px;margin-right:100px"> Enables users to  input musical notes using a GUI to create music.</p>
+       
+<h3 style="text-align: center;font-size: 18px"> Hytek-File-Reader </h3>
+<p style = "text-align: center;margin-left: 100px;margin-right:100px"> Reads hytek files from USA Swimming meets and generates an easy
+to read visualizations of the data.</p>
+
+ </div>
+       
     </body>
 </html>
