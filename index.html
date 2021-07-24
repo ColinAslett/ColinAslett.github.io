@@ -41,7 +41,7 @@ style="float: right" border="0"/>>
 
 <h2 style="text-align:center;font-size: 32px"> Introduction </h2>
 
-<p style = "text-align:justify; margin-left: 100px;margin-right:100px"> Hello! I am a Computer Science major who is pursuing a career in software design.
+<p style = "text-align:justify; margin-left: 50px;margin-right:50px"> Hello! I am a Computer Science major who is pursuing a career in software design.
 I have used several programming languages to create software for school, work and personal projects.
 In college, I was a varsity athlete and I still follow a disciplined strength and conditioning routine.
 My interest in sports has created a passion for writing sports analytics software.
@@ -56,10 +56,10 @@ an example of the results after the final week of the 2021 season, and an exampl
 The final section is work in progress and will compare the relative performance of each system as more data is obtained.
 
 </p>
-<p style = "text-align:center; margin-left: 100px;margin-right:100px"> Learn more about me here:
+<p style = "text-align:center; margin-left: 50px;margin-right:50px"> Learn more about me here:
 <button type="button"> <a href="https://www.linkedin.com/in/colin-aslett-10384a201/"> LinkedIn </a> </button>
 </p>
-<p style = "text-align:center; margin-left: 100px;margin-right:100px"> The code can be found here:
+<p style = "text-align:center; margin-left: 50px;margin-right:50px"> The code can be found here:
 <button type="button"> <a href="https://github.com/ColinAslett/CollegeFootballRATINGSystem"> GitHub </a> </button>
 </p>
   </div>
@@ -71,34 +71,34 @@ The final section is work in progress and will compare the relative performance 
 
 <h2 style="text-align:center;font-size: 32px"> A Brief Comparison of the Rating Systems Used </h2>
 
-<p style="text-align:justify; margin-left: 100px;margin-right:100px"> <strong>Elo: </strong>
+<p style="text-align:justify; margin-left: 50px;margin-right:50px"> <strong>Elo: </strong>
 The Elo rating system is well known for its use in chess. Elo uses the existing rating of the competitors
 and the result of the match to determine each competitor's new Elo rating. The Elo rating for each team starts
 at 1500 at the beginning of the season with a global K-value of 80-100.
 A more detailed description of the Elo rating system can be found here:
 <a href="https://en.wikipedia.org/wiki/Elo_rating_system"> Elo Details </a> </p>
 
-<p style="text-align:justify; margin-left: 100px;margin-right:100px">  <strong>Glicko 2: </strong>
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong>Glicko 2: </strong>
 The Glicko 2 rating system is similar to the Elo system.  The difference is mostly the inclusion of a ratings deviation
 that gives an indication of the reliability of the rating.
 The rating deviation for each team starts at 350 but, as more games are played, Glicko 2 gets more confident and it will decrease.
 A more detailed description of this rating system can be found here:
 <a href="https://en.wikipedia.org/wiki/Glicko_rating_system"> Glicko 2 Details </a> </p>
 
-<p style="text-align:justify; margin-left: 100px;margin-right:100px">  <strong>HITS: </strong>
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong>HITS: </strong>
 Hyperlink-Induced Topic Search (HITS) was originally designed as a link analysis algorithm that rates web pages. I have modified the algorithm
 to rate college football teams.
 A more detailed description of this rating system can be found here:
 <a href="https://en.wikipedia.org/wiki/HITS_algorithm"> HITS Details </a> </p>
 
-<p style="text-align:justify; margin-left: 100px;margin-right:100px">  <strong>PageRank: </strong>
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong>PageRank: </strong>
 PageRank was originally developed by Google to rank websites but can be applied to sports as well. As shown in Table 1, it is a graph-based
 rating system and the rating of a team is affected by how the strength of
 their opponents continue to evolve over the course of the season after they have played them.
 A more detailed description of this rating system can be found here:
 <a href="https://en.wikipedia.org/wiki/PageRank"> PageRank Details </a> </p>
 
-<p style="text-align:justify; margin-left: 100px;margin-right:100px">  <strong>BG </strong>
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong>BG </strong>
 BG is my interpretation of the BeatGraph system. As shown in Table 1, this is also a graph based rating system. BeatGraph is the only rating system
 I use that purposefully destroys part of the game data in an attempt to create a acyclic graph. In college football this generally results in about 30-40%
 of game data being thrown away. A more detailed description of this rating system can be found here:
@@ -173,7 +173,7 @@ of game data being thrown away. A more detailed description of this rating syste
         <!-- College Football-->
         <div class="class1">
 
-<p style="text-align:justify; margin-left: 100px;margin-right:100px">  
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  
 Table 2 shows the results obtained at the conclusion of the 2020/2021 college footbal regular season based on all of the games played to that point.
 The results for each rating system are listed in their rank order and shown next to each other to make it easy to see the differences.
 The final ranking from the BCS committee is also shown for reference.
@@ -190,7 +190,7 @@ The program generates a rating for all college Div. 1 football teams but only th
 <div>
 <h2 style="text-align:center;font-size: 32px"> Applying MLR to Predict Game Results </h2>
 
-<p style="text-align:justify; margin-left: 100px;margin-right:100px">  <strong> Win Probabilities using MLR: </strong>
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong> Win Probabilities using MLR: </strong>
 In addition to providing the relative ranking of college football teams, I will also provide the win probabilities for upcoming games using the
 Multiple Linear Regression(MLR) formula. As shown in Table 3, MLR will use the scores of the past games and game data (like yards per game) to determine the win probabilities
 of a team in a future match. Table 4 shows an example of how I will record the percentage odds of a given team winning their match starting in the 2021/2022 season.
@@ -271,16 +271,16 @@ A more detailed description of this rating system can be found here:
 
 <h2 style="text-align:center;font-size: 32px"> Rating System Performance </h2>
 
-<p style="text-align:justify;font-size: 16px;margin-left: 100px;margin-right:100px"> <b> Predicton Accuracy (under construction). </b> This section
+<p style="text-align:justify;font-size: 16px;margin-left: 50px;margin-right:50px"> <b> Predicton Accuracy (under construction). </b> This section
 will show how well each rating system predicts the  winner of a college football game. It is still a work in progress.  </p>
            
-<p style="text-align: justify;font-size: 16px;margin-left: 100px;margin-right:100px"> <b> Notes: </b> The note section will include my own opinion on
+<p style="text-align: justify;font-size: 16px;margin-left: 50px;margin-right:50px"> <b> Notes: </b> The note section will include my own opinion on
 how each rating system is performing, highlighting their weaknesses and strengths. For example, in 2020/2021, with Covid-19 forcing many conferences to
 only play against teams within the conference, the graph-based rating systems suffered. Alabama had a perfect score in the SEC but was ranked lower
 than other teams that simply played teams outside of their conference. Another challenge for the rating systems in the 2020/2021 season was that many
 teams did not play the same number of games, which is crucial when the regular season is only about a dozen games to begin with.  </p>
        
-<p style="text-align: justify;font-size: 16px;margin-left: 100px;margin-right:100px"> <b> Technical Discussion (under construction): </b> This section
+<p style="text-align: justify;font-size: 16px;margin-left: 50px;margin-right:50px"> <b> Technical Discussion (under construction): </b> This section
 will show how each rating system is performing from an analytical standpoint. It will include the brier score, log loss, and many graphs. </p>
 
  </div>
@@ -288,22 +288,22 @@ will show how each rating system is performing from an analytical standpoint. It
 
         <div>
 <h2 style="text-align:center;font-size: 32px"> Other Projects </h2>
-<p style = "text-align: center ;margin-left: 100px;margin-right:100px"> Please contact me if you want to learn more about some other projects I have completed, such as:
+<p style = "text-align: center ;margin-left: 50px;margin-right:50px"> Please contact me if you want to learn more about some other projects I have completed, such as:
 
 <h2 style="text-align: center;font-size: 18px"> Weather App </h2>
-<p style = "text-align: justify ;margin-left: 100px;margin-right:100px"> Extracts and interprets raw weather model data from the
+<p style = "text-align: justify ;margin-left: 50px;margin-right:50px"> Extracts and interprets raw weather model data from the
 internet to give weather forecasts for anywhere in the Contential United States. The weather models currently scraped are: NAM,NAMNEST,HRRR,GFS, and RAP. The program specializes in determining whether there is a severe weather
 threat for a specific area, but also provides a basic forecast including: temperature, precipitation amount, visibility, and many other.</p>
        
 <h3 style="text-align: center;font-size: 18px"> SportsDataExtractor </h3>
-<p style = "text-align: center;margin-left: 100px;margin-right:100px"> Extracts data from internet for all major and collegiate sports in the USA.
+<p style = "text-align: center;margin-left: 50px;margin-right:50px"> Extracts data from internet for all major and collegiate sports in the USA.
 Once the data is extracted it is transformed into an easily readable csv file.</p>
        
 <h3 style="text-align: center;font-size: 18px"> Project-5-8-teamalpha </h3>
-<p style = "text-align: center;margin-left: 100px;margin-right:100px"> Enables users to  input musical notes using a GUI to create music.</p>
+<p style = "text-align: center;margin-left: 50px;margin-right:50px"> Enables users to  input musical notes using a GUI to create music.</p>
        
 <h3 style="text-align: center;font-size: 18px"> Hytek-File-Reader </h3>
-<p style = "text-align: center;margin-left: 100px;margin-right:100px"> Reads hytek files from USA Swimming meets and generates an easy
+<p style = "text-align: center;margin-left: 50px;margin-right:50px"> Reads hytek files from USA Swimming meets and generates an easy
 to read visualizations of the data.</p>
 
  </div>
