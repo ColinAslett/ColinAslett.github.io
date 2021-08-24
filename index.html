@@ -2,74 +2,119 @@
 <html>
     <head>
         <style>
+
+figcaption {
+text-align: center
+}
+
         body {
   font-family: Garamond, serif;
 }
             table,th,td{
                 border: 1px solid black;
                 border-collapse: collapse;
+padding: 5px
             }
             th{
 font-weight: normal;
 }
 tr:nth-child(1){
-background-color: lightcoral;
+background-color: GhostWhite;
 }
 tr:nth-child(even){
-background-color: #f2f2f2;
+background-color:WhiteSmoke;
 }
 
-body {font-family:calibri}
+body {font-family:Calibri}
 
 .class1{
 
 }
         </style>
-        <title>College Football Rating</title>
+        <title>Colin Aslett's College Football Ratings and Predictions</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body style="background-color:white">
         <div>
-<! <img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/1763292%20(2).png" width="100" height="100"  
-style="float: right" border="0"/>>
            
-<p style="text-indent: 5px; text-align:center; margin:0; font-size: 42px;background-color:SteelBlue;color:white"> College Football Rating System </p>
-<p style = "text-indent: 5px; text-align:center; margin:0; font-size: 36px;background-color:SteelBlue;color:white"> By Colin Aslett </p>
-<p style = "text-indent: 5px; text-align:center; margin:0; font-size: 18px;background-color:SteelBlue;color:white"> BS Computer Science (Dec. 2021), Whitman College </p>
-<p style = "text-indent: 5px; text-align:center; margin:0; font-size: 18px;background-color:SteelBlue;color:white"> aslettcj@whitman.edu </p>
+<img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/College%20Football%20Header.png" width="100%" height="auto">
+ 
+<p style = "text-indent: 5px; text-align:center; margin:1; font-size: 16px;background-color:White;color:Black">
+<b>Contact: aslettcj@whitman.edu</b> </p>
 
-<h2 style="text-align:center;font-size: 32px"> Introduction </h2>
+<h2 style="text-align:center;font-size: 32px"> <a name="Top_of_page">  My College Football Ratings & Predictions </h2>
 
-<p style = "text-align:justify; margin-left: 50px;margin-right:50px"> Hello! I am a Computer Science major who is pursuing a career in software design.
-I have used several programming languages to create software for school, work and personal projects.
-In college, I was a varsity athlete and I still follow a disciplined strength and conditioning routine.
-My interest in sports has created a passion for writing sports analytics software.
-In my spare time, I also like to analyze no-limit hold'em poker games vs. game theory optimization.
+<p style = "text-align:justify; margin-left: 50px;margin-right:50px"> Hello! I am a Computer Science major who is pursuing a
+career in software design. I have used several programming languages to create software for school, work and personal projects.
+In college, I was a varsity athlete and I still follow a disciplined strength and conditioning routine. My interest in sports has
+created a passion for developing sports analytics software.
 <br/> <br/>
-This website gives examples of the type of results my NCAA Division 1 football rating system generates.
-As described in the readme file for the program in the repository, my program
-reads the results of each NCCA Division 1 college football match during the season from
-<a href="https://collegefootballdata.com/"> collegefootballdata.com</a> and provides a rating and relative
-ranking of each team using five different rating systems. The information below provides a brief comparison of the ratings systems,
-an example of the results after the final week of the 2021 season, and an example of the forecasted win % for upcoming games using MLR.
-The final section is work in progress and will compare the relative performance of each system as more data is obtained.
+This website gives results from the different NCAA Division 1 football rating and game prediction systems that I have been experimenting with.
+For the college team rankings, I have developed programs using Java to read the results of each NCAA D1 college football match during the season from
+<a href="https://collegefootballdata.com/"> collegefootballdata.com</a> and then generate a rating and relative ranking of each team using five different rating
+systems (Elo, Glicko 2, Beat Graph, Page Rank and HITS). For the game predictions, I extracted 10 years of previous NCAA D1 football game results and use the R programming language and machine learning to build models
+based on classification algorithms (Random Forest, SVM, Neural Net, Decision Tree, Naive Bayes and k-NN) described at <a href="https://cran.r-project.org/"> cran.r-project.org </a>. The algorithms classify (predict) games not yet
+played as either a home team victory or an away team victory. At first, I am keeping things simple. However, I will continue to update this site as I experiment with the approaches.
+</p>
 
-</p>
-<p style = "text-align:center; margin-left: 50px;margin-right:50px"> Learn more about me here:
+<p style = "text-align:center; margin-left: 50px;margin-right:50px"> More about me here:
 <button type="button"> <a href="https://www.linkedin.com/in/colin-aslett-10384a201/"> LinkedIn </a> </button>
-</p>
-<p style = "text-align:center; margin-left: 50px;margin-right:50px"> The code can be found here:
+The code is here:
 <button type="button"> <a href="https://github.com/ColinAslett/CollegeFootballRATINGSystem"> GitHub </a> </button>
 </p>
+
+<p style = "text-align:center; margin-left: 50px;margin-right:50px"> Go to the <a href="#Current_Results"> Current Rankings and Predictions </a></p>
+
+<p style = "text-align:center; margin-left: 50px;margin-right:50px"> Go to the <a href="#Summary_of_the_Rating_Systems"> Rating System Descriptions and Results for Past Seasons</a></p>
+
+<p style = "text-align:center; margin-left: 50px;margin-right:50px"> Go to the <a href="#Game_Predictions"> Game Prediction Models, Variables, Training Data and Test Results </a> </p>
   </div>
 
 <hr style="height:2px;background: black;">
- 
-<div>
+<h2 style="text-align:center;font-size: 32px;"> <a name="Current_Results"> </a> Current 2021-22 Team Rankings & Game Predictions
+</h2>
+<h2 style="text-align:center;font-size: 24px;"> College Team Rankings </h2>
+<h2 style="text-align:center;font-size: 18px;"> The table will be populated after week 1 games complete </h2>
 
 
-<h2 style="text-align:center;font-size: 32px"> A Brief Comparison of the Rating Systems Used </h2>
+<table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
+<tr>
+<th style="background-color: White"><b>Rank</b></th>
+<th style="background-color: LightBlue"> <b>Elo</b></th> <th style="background-color: LightBlue"><b>Score</b></th>
+<th style="background-color: LightGreen"> <b>Glicko 2</b></th> <th style="background-color: LightGreen"><b>Score</b> </th><th style="background-color: LightGreen"><b>Dev.</b></th>
+<th style="background-color: LightPink"> <b>BG</b></th> <th style="background-color: LightPink"><b>Score</b></th>
+<th style="background-color: LightYellow"> <b>PageRank</b></th> <th style="background-color: LightYellow"><b>Score</b></th>
+<th style="background-color: LightSalmon"> <b>HITS</b></th> <th style="background-color: LightSalmon"><b>Score</b></th></tr>
+
+<tr><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+</table>
+
+<h2 style="text-align:center;font-size: 24px;"> Week 1 Selected Game Predictions </h2>
+
+<table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
+<tr>
+<th style="background-color: LightGreen;"> <b> Home Team </b> </th>
+<th style="background-color: LightYellow;"> <b> Away Team </b> </th>
+<th style="background-color: lightBlue;"> <b> Random Forest </b> </th>
+<th style="background-color: lightBlue;"> <b> SVM </b> </th>
+<th style="background-color: lightBlue;"> <b> Neural Net </b> </th>
+<th style="background-color: lightBlue;"> <b> Decision Tree </b> </th>
+<th style="background-color: lightBlue;"> <b> Naive Bayes</b> </th>
+<th style="background-color: lightBlue;"> <b> k-NN  </b> </th>
+</tr>
+<tr><td>Illinois</td><td>Nebraska</td><td>Away</td><td>Away</td><td>Away (93%)</td><td>Away</td><td>Away</td><td>Away</td></tr>
+<tr><td>Fresno State</td><td>UConn</td><td>Home</td><td>Away</td><td>Home (65%)</td><td>Home</td><td>Home</td><td>Away</td></tr>
+<tr><td>UCLA</td><td>Hawaii</td><td>Home</td><td>Home</td><td>Home (62%)</td><td>Home</td><td>Home</td><td>Home</td></tr>
+<tr><td>New Mexico State</td><td>UTEP</td><td>Home</td><td>Home</td><td>Home (92%)</td><td>Away</td><td>Home</td><td>Away</td></tr>
+<tr><td>San Jose State</td><td>Southern Utah</td><td>Home</td><td>Home</td><td>Home (93%)</td><td>Home</td><td>Home</td><td>Home</td></tr>
+</table>
+
+
+<hr style="height:2px;background: black;">
+<h2 style="text-align:center;font-size: 32px;"> <a name="Summary_of_the_Rating_Systems"> </a> Rating Systems Summary</h2>
+<p style = "text-align:center; margin-left: 50px;margin-right:50px"> Return to <a href="#Top_of_page"> Top</a></p>
+
 
 <p style="text-align:justify; margin-left: 50px;margin-right:50px"> <strong>Elo: </strong>
 The Elo rating system is well known for its use in chess. Elo uses the existing rating of the competitors
@@ -78,215 +123,371 @@ at 1500 at the beginning of the season with a global K-value of 80-100.
 A more detailed description of the Elo rating system can be found here:
 <a href="https://en.wikipedia.org/wiki/Elo_rating_system"> Elo Details </a> </p>
 
-<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong>Glicko 2: </strong>
-The Glicko 2 rating system is similar to the Elo system.  The difference is mostly the inclusion of a ratings deviation
-that gives an indication of the reliability of the rating.
-The rating deviation for each team starts at 350 but, as more games are played, Glicko 2 gets more confident and it will decrease.
-A more detailed description of this rating system can be found here:
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong>Glicko 2 (G2): </strong>
+The Glicko 2 rating system is similar to the Elo system.  The main difference is the inclusion of a ratings deviation
+that gives an indication of the reliability of the rating. The rating deviation for each team starts at 350 but, as more games are played,
+Glicko 2 gets more confident and that number will decrease. A more detailed description of this rating system can be found here:
 <a href="https://en.wikipedia.org/wiki/Glicko_rating_system"> Glicko 2 Details </a> </p>
 
-<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong>HITS: </strong>
-Hyperlink-Induced Topic Search (HITS) was originally designed as a link analysis algorithm that rates web pages. I have modified the algorithm
-to rate college football teams.
-A more detailed description of this rating system can be found here:
-<a href="https://en.wikipedia.org/wiki/HITS_algorithm"> HITS Details </a> </p>
 
-<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong>PageRank: </strong>
-PageRank was originally developed by Google to rank websites but can be applied to sports as well. As shown in Table 1, it is a graph-based
-rating system and the rating of a team is affected by how the strength of
-their opponents continue to evolve over the course of the season after they have played them.
-A more detailed description of this rating system can be found here:
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong>PageRank (PR): </strong>
+PageRank was originally developed by Google to rank websites but can be applied to sports as well. PageRank is a graph-based
+rating system and the rating of a team is affected by how the strength of their opponents continues to evolve over the course of the
+season after they have played them. A more detailed description of this rating system can be found here:
 <a href="https://en.wikipedia.org/wiki/PageRank"> PageRank Details </a> </p>
 
-<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong>BG </strong>
-BG is my interpretation of the BeatGraph system. As shown in Table 1, this is also a graph based rating system. BeatGraph is the only rating system
-I use that purposefully destroys part of the game data in an attempt to create a acyclic graph. In college football this generally results in about 30-40%
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong>BeatGraph (BG) </strong>
+BeatGraph is my interpretation of the BeatGraph system. This is also a graph based rating system. BeatGraph is the only rating system
+I use that purposefully destroys part of the game data in an attempt to create an acyclic graph. In college football this generally results in about 30-40%
 of game data being thrown away. A more detailed description of this rating system can be found here:
 <a href="http://www.beatgraphs.com/GettingStarted.php"> BeatGraph Details </a> </p>
 
-<p style="text-align: center"> <u>Table 1: A Comparison of the Rating Systems </u> </p>
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong>HITS: </strong>
+Hyperlink-Induced Topic Search (HITS) was originally designed as a link analysis algorithm that rates web pages. I have modified the algorithm
+to rate college football teams. A more detailed description of this rating system can be found here:
+<a href="https://en.wikipedia.org/wiki/HITS_algorithm"> HITS Details </a> </p>
 
-<table style="width: 75%;font-size: 14px;margin-right:auto;margin-left: auto">
-<tr>
-<th> <b> Rating Sytem </b> </th>
-<th> <b> Uses Results From Season </b> </th>
-<th> <b> Uses Score of Games </b> </th>
-<th> <b> Uses Game Data </b> </th>
-<th> <b> Graph-Based </b> </th>
-<th> <b> More Details </b> </th>
-</tr>
-<tr>
-<th> Elo </th>
-<th> <span> &#10003; </span> </th>
-<th> X </th>
-<th> X </th>
-<th> X </th>
-<th> <a href="https://en.wikipedia.org/wiki/Elo_rating_system"> Link </a> </th>
-</tr>
-<tr>
-<th> Glicko 2 </th>
-<th> <span> &#10003; </span> </th>
-<th> X </th>
-<th> X </th>
-<th> X </th>
-<th> <a href="https://en.wikipedia.org/wiki/Glicko_rating_system"> Link </a> </th>
-</tr>
-<tr>
-<th> HITS </th>
-<th> <span> &#10003; </span> </th>
-<th> X </th>
-<th> X </th>
-<th> <span> &#10003; </span> </th>
-<th> <a href="https://en.wikipedia.org/wiki/HITS_algorithm"> Link </a>  </th>
-</tr>
-<tr>
-<th> PageRank </th>
-<th> <span> &#10003; </span> </th>
-<th> X </th>
-<th> X </th>
-<th> <span> &#10003; </span> </th>
-<th> <a href="https://en.wikipedia.org/wiki/PageRank"> Link </a> </th>
-</tr>
-<tr>
-<th> BG </th>
-<th> <span> &#10003; </span> </th>
-<th> X </th>
-<th> X </th>
-<th> <span> &#10003; </span> </th>
-<th> <a href="http://www.beatgraphs.com/GettingStarted.php"> Link </a> </th>
-</tr>
-<tr>
-<th> MLR </th>
-<th> <span> &#10003; </span> </th>
-<th> <span> &#10003; </span> </th>
-<th> <span> &#10003; </span> </th>
-<th> <span> &#10003; </span> </th>
-<th> <a href="https://en.wikipedia.org/wiki/Linear_regression"> Link </th>
-</tr>
-</table>
 </div>
-       
-<hr style="height:2px;background: black;">
 
-<h2 style="text-align:center;font-size: 32px"> An Example using the 2020-2021 Season </h2>
+<h2 style="text-align:center;font-size: 32px"> Summary of College Football Ranking Results </h2>
 
-        <!-- College Football-->
-        <div class="class1">
+<p style="text-align:justify; margin-left: 50px;margin-right:50px"> The Figure below summarizes the results for the college football D1 rankings for the
+2018-19, 2019-20, and 2020-21 seasons. Each table in that figure includes the final regular season rankings from the CFP Selection Committee before the bowl games
+and college playoffs begin (the column called "comm"). The other columns include the rank calculated using the different rating systems. Even though the CFB Selection Committee's
+ranking is often hotly debated, we use it as the reference to calculate the Root Mean Square Error (RMSE) for each rating system at the end of each regular season.
+This makes it easier to compare the results for each rating system. The green cells in the tables represent the teams in the committee's top 25 list that also were calculated
+to be in the top 50 for the given rating system. The red cells represent teams in the committee's top 25 that were calculated to be outside the top 50 for the given rating system.
+More details for each model for the last three seasons are provided in the next part of this section.
+</p>
+
+<figure><center><img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/College%20Rankings%20RMSE%20Comparison.png" width="100%" height="auto"> </center>
+<br/>
+<figcaption> Figure 1: Summary of Ranking Results and RMSE for the Past Three Seasons </figcaption></figure>
+
+<h2 style="text-align:center;font-size: 32px"> College Football Ranking Result Details </h2>
+
+<h2 style="text-align:left;font-size: 24px; margin-left: 50px; margin-right:50px"> The 2018-2019 Season </h2>
+
+<!-- College Football-->
+<div class="class1">
 
 <p style="text-align:justify; margin-left: 50px;margin-right:50px">  
-Table 2 shows the results obtained at the conclusion of the 2020/2021 college footbal regular season based on all of the games played to that point.
-The results for each rating system are listed in their rank order and shown next to each other to make it easy to see the differences.
-The final ranking from the BCS committee is also shown for reference.
-The program generates a rating for all college Div. 1 football teams but only the top 25 for each system are shown in Table 2.
+The tables below show the rating results for each system at the conclusion of the 2018/2019 college football regular season. The RMSE numbers as calculated as previously described.
+Although the program generates a rating and ranking for > 200 college Div. 1 football teams, only the top 25 from the committee and for each system are shown in the table.
 </p>
 
-<p style="text-align: justify;font-size: 16px;margin-left: 50px;margin-right:50px"> <b> Notes: </b> In 2020/2021, with Covid-19 forcing many conferences to
-only play against teams within the conference, the graph-based rating systems suffered. Alabama had a perfect score in the SEC but was ranked lower
-than other teams that simply played teams outside of their conference. Another challenge for the rating systems in the 2020/2021 season was that many
-teams did not play the same number of games, which is crucial when the regular season is only about a dozen games to begin with.  </p>
+<p style="text-align: center"> <u>Table 1: RMSE vs. Playoff Selection Committee Rankings for Each Model (2018-19) </u> </p>
 
-
-<p style="text-align: center"> <u>Table 2: College Football 2020-2021 Season (Regular Season Only) </u> </p>
-
-<p style="text-align:center;"><img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Screen%20Shot%202021-07-22%20at%2011.27.03%20AM.png" width="100%" height="auto"></p>
-
-<p style="text-align:center;"><img src="https://dbukjj6eu5tsf.cloudfront.net/sidearm.sites/collegefootballplayoff.sidearmsports.com/images/2020/12/20/CFP_T25_1920x1080.png" width="100%" height="auto"></p>
-        <hr style="height:2px;background: black;">
-
-<div>
-<h2 style="text-align:center;font-size: 32px"> Applying MLR to Predict Game Results </h2>
-
-<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong> Win Probabilities using MLR: </strong>
-In addition to providing the relative ranking of college football teams, I will also provide the win probabilities for upcoming games using the
-Multiple Linear Regression(MLR) formula. As shown in Table 3, MLR will use the scores of the past games and game data (like yards per game) to determine the win probabilities
-of a team in a future match. Table 4 shows an example of how I will record the percentage odds of a given team winning their match starting in the 2021/2022 season.
-The table will be updated weekly before the games begin once the college season begins.
-A more detailed description of this rating system can be found here:
-<a href="http://www.beatgraphs.com/GettingStarted.php"> MLR Details </a>
-</p>
-
-<p style="text-align: center"> <u>Table 3: MLR Features </u> </p>
-
-<table style="width: 75%;font-size: 14px;margin-right:auto;margin-left: auto">
+<table style="width: 75%;font-size: 12px;margin-right:auto;margin-left: auto">
 <tr>
-<th> <b> Sytem </b> </th>
-<th> <b> Uses Results From Season </b> </th>
-<th> <b> Uses Score of Games </b> </th>
-<th> <b> Uses Game Data </b> </th>
-<th> <b> Graph-Based </b> </th>
-<th> <b> More Details </b> </th>
+<th style="background-color: LightBlue"> <b> Elo </b> </th>
+<th style="background-color: LightGreen"> <b> Glicko 2 </b> </th>
+<th style="background-color: LightPink"><b> BG </b> </th>
+<th style="background-color: LightYellow"> <b> PageRank </b> </th>
+<th style="background-color: LightSalmon"> <b> HITS </b> </th>
 </tr>
 <tr>
-<th> MLR </th>
-<th> <span> &#10003; </span> </th>
-<th> <span> &#10003; </span> </th>
-<th> <span> &#10003; </span> </th>
-<th> <span> &#10003; </span> </th>
-<th> <a href="https://en.wikipedia.org/wiki/Linear_regression"> Link </th>
+<th> 8.48 </th>
+<th> 5.90 </th>
+<th> 72.93 </th>
+<th> 8.57 </th>
+<th> 13.97 </th>
 </tr>
 </table>
 
+<p style="text-align: center"> <u>Table 2: College Football 2018-2019 Season (Regular Season Only) </u> </p>
+
+<table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
+
+<tr>
+<th style="background-color: White"><b>Rank</b></th>
+<th style="background-color: Gold"> <b>Committee</b></th>
+<th style="background-color: LightBlue"> <b>Elo</b></th> <th style="background-color: LightBlue"><b>Score</b></th>
+<th style="background-color: LightGreen"> <b>Glicko 2</b></th> <th style="background-color: LightGreen"><b>Score</b> </th><th style="background-color: LightGreen"><b>Dev.</b></th>
+<th style="background-color: LightPink"> <b>BG</b></th> <th style="background-color: LightPink"><b>Score</b></th>
+<th style="background-color: LightYellow"> <b>PageRank</b></th> <th style="background-color: LightYellow"><b>Score</b></th>
+<th style="background-color: LightSalmon"> <b>HITS</b></th> <th style="background-color: LightSalmon"><b>Score</b></th></tr>
+
+<tr><td>1</td><td>Alabama</td><td>Alabama</td><td>1925.18</td><td>Alabama</td><td>2161.95</td><td>131.46</td><td>Notre Dame</td><td>126</td><td>Alabama</td><td>152.75</td><td>Clemson</td><td>162.16</td></tr>
+<tr><td>2</td><td>Clemson</td><td>Clemson</td><td>1909.07</td><td>Clemson</td><td>2157.07</td><td>134.17</td><td>Alabama</td><td>122</td><td>Texas</td><td>148.79</td><td>Alabama</td><td>162.16</td></tr>
+<tr><td>3</td><td>Notre Dame</td><td>Notre Dame</td><td>1870.76</td><td>Notre Dame</td><td>2125.53</td><td>143.24</td><td>Missouri</td><td>119</td><td>Purdue</td><td>125.3</td><td>Notre Dame</td><td>149.68</td></tr>
+<tr><td>4</td><td>Oklahoma</td><td>UCF</td><td>1862.96</td><td>Ohio State</td><td>2063.49</td><td>127.03</td><td>Ohio State</td><td>117</td><td>Oklahoma</td><td>122.38</td><td>UCF</td><td>149.68</td></tr>
+<tr><td>5</td><td>Georgia</td><td>Ohio State</td><td>1855.51</td><td>UCF</td><td>2061.22</td><td>138.09</td><td>Florida</td><td>114</td><td>Ohio State</td><td>108.77</td><td>Ohio State</td><td>138.82</td></tr>
+<tr><td>6</td><td>Ohio State</td><td>Oklahoma</td><td>1839.6</td><td>Oklahoma</td><td>2033.27</td><td>121.67</td><td>Michigan</td><td>111</td><td>Notre Dame</td><td>106.97</td><td>Oklahoma</td><td>133.4</td></tr>
+<tr><td>7</td><td>Michigan</td><td>Georgia</td><td>1802.81</td><td>Georgia</td><td>2027.38</td><td>122.44</td><td>LSU</td><td>108</td><td>Clemson</td><td>106.58</td><td>Fresno State</td><td>108.26</td></tr>
+<tr><td>8</td><td>UCF</td><td>Appalachian State</td><td>1775.73</td><td>Army</td><td>1925.73</td><td>145.99</td><td>Penn State</td><td>101</td><td>Washington</td><td>104.67</td><td>Washington State</td><td>97.6</td></tr>
+<tr><td>9</td><td>Washington</td><td>Washington</td><td>1770.9</td><td>Washington</td><td>1923.4</td><td>119.18</td><td>Iowa</td><td>95</td><td>Georgia</td><td>103.47</td><td>Georgia</td><td>97.4</td></tr>
+<tr><td>10</td><td>Florida</td><td>Fresno State</td><td>1769.11</td><td>Washington State</td><td>1915.12</td><td>129.93</td><td>Iowa State</td><td>80</td><td>LSU</td><td>88.16</td><td>Utah State</td><td>93.98</td></tr>
+<tr><td>11</td><td>LSU</td><td>Army</td><td>1759.09</td><td>Appalachian State</td><td>1910.38</td><td>127</td><td>Georgia</td><td>76</td><td>Oklahoma State</td><td>81.49</td><td>Appalachian State</td><td>92.17</td></tr>
+<tr><td>12</td><td>Penn State</td><td>Michigan</td><td>1740.43</td><td>Michigan</td><td>1904.79</td><td>124.27</td><td>Miami</td><td>75</td><td>Texas A&M</td><td>79.56</td><td>Army</td><td>90.36</td></tr>
+<tr><td>13</td><td>Washington State</td><td>Boise State</td><td>1734.23</td><td>LSU</td><td>1903.65</td><td>128.16</td><td>West Virginia</td><td>74</td><td>Michigan</td><td>72.46</td><td>Cincinnati</td><td>88.55</td></tr>
+<tr><td>14</td><td>Kentucky</td><td>Texas A&M</td><td>1722.77</td><td>Iowa State</td><td>1899.84</td><td>129.59</td><td>Clemson</td><td>73</td><td>Kentucky</td><td>71.85</td><td>UAB</td><td>86.74</td></tr>
+<tr><td>15</td><td>Texas</td><td>Washington State</td><td>1716.87</td><td>Fresno State</td><td>1898.11</td><td>122.53</td><td>Oklahoma</td><td>72</td><td>Washington State</td><td>70.68</td><td>Washington</td><td>84.93</td></tr>
+<tr><td>16</td><td>West Virginia</td><td>Florida</td><td>1713.1</td><td>Texas A&M</td><td>1892.62</td><td>119.87</td><td>Vanderbilt</td><td>72</td><td>Florida</td><td>68.77</td><td>Boise State</td><td>81.31</td></tr>
+<tr><td>17</td><td>Utah</td><td>Iowa State</td><td>1710.86</td><td>Florida</td><td>1887.07</td><td>121.33</td><td>Army</td><td>70</td><td>Northwestern</td><td>66.8</td><td>Michigan</td><td>81.31</td></tr>
+<tr><td>18</td><td>Mississippi State</td><td>Temple</td><td>1700.04</td><td>Texas</td><td>1886.08</td><td>117.08</td><td>Mississippi State</td><td>67</td><td>West Virginia</td><td>65.31</td><td>Buffalo</td><td>77.69</td></tr>
+<tr><td>19</td><td>Texas A&M</td><td>Penn State</td><td>1698.28</td><td>Penn State</td><td>1876.27</td><td>122.63</td><td>Fresno State</td><td>66</td><td>Boise State</td><td>65.26</td><td>North Texas</td><td>74.26</td></tr>
+<tr><td>20</td><td>Syracuse</td><td>Cincinnati</td><td>1696.46</td><td>Boise State</td><td>1872.5</td><td>115.79</td><td>North Texas</td><td>61</td><td>Auburn</td><td>65.2</td><td>Kentucky</td><td>68.83</td></tr>
+<tr><td>21</td><td>Fresno State</td><td>Syracuse</td><td>1692.3</td><td>Mississippi State</td><td>1870.99</td><td>123.79</td><td>Tennessee</td><td>60</td><td>Michigan State</td><td>62.85</td><td>Troy</td><td>65.21</td></tr>
+<tr><td>22</td><td>Northwestern</td><td>Utah State</td><td>1690.99</td><td>Syracuse</td><td>1866.59</td><td>130.03</td><td>Indiana</td><td>59</td><td>Missouri</td><td>62.14</td><td>Florida</td><td>61.6</td></tr>
+<tr><td>23</td><td>Missouri</td><td>Mississippi State</td><td>1685.12</td><td>Cincinnati</td><td>1866.32</td><td>134.94</td><td>NC State</td><td>59</td><td>Penn State</td><td>61.79</td><td>Georgia Southern</td><td>61.6</td></tr>
+<tr><td>24</td><td>Iowa State</td><td>Texas</td><td>1682.47</td><td>Kentucky</td><td>1861.73</td><td>127.31</td><td>Virginia Tech</td><td>52</td><td>Minnesota</td><td>61.39</td><td>NC State</td><td>61.6</td></tr>
+<tr><td>25</td><td>Boise State</td><td>Missouri</td><td>1679.81</td><td>West Virginia</td><td>1847.07</td><td>129.18</td><td>Auburn</td><td>52</td><td>Utah</td><td>59.54</td><td>Penn State</td><td>59.79</td></tr>
+</table>
+
+
+<h2 style="text-align:left;font-size: 24px; margin-left: 50px; margin-right:50px"> The 2019-2020 Season </h2>
+
+<!-- College Football-->
+<div class="class1">
+
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  
+The tables below show the rating results for each system at the conclusion of the 2019/2020 college football regular season. The RMSE numbers as calculated as previously described.
+Although the program generates a rating and ranking for > 200 college Div. 1 football teams, only the top 25 from the committee and for each system are shown in the table.
+</p>
+
+<p style="text-align: center"> <u>Table 3: RMSE vs. Playoff Selection Committee Rankings for Each Model (2019-20) </u> </p>
+
+<table style="width: 75%;font-size: 12px;margin-right:auto;margin-left: auto">
+<tr>
+<th style="background-color: LightBlue"> <b> Elo </b> </th>
+<th style="background-color: LightGreen"> <b> Glicko 2 </b> </th>
+<th style="background-color: LightPink"><b> BG </b> </th>
+<th style="background-color: LightYellow"> <b> PageRank </b> </th>
+<th style="background-color: LightSalmon"> <b> HITS </b> </th>
+</tr>
+<tr>
+<th> 7.53 </th>
+<th> 5.52</th>
+<th> 68.85 </th>
+<th> 11.06 </th>
+<th> 10.95 </th>
+</tr>
+</table>
+
+<p style="text-align: center"> <u>Table 4: College Football 2019-2020 Season (Regular Season Only) </u> </p>
+
+<table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
+
+<tr>
+<th style="background-color: White"><b>Rank</b></th>
+<th style="background-color: Gold"> <b>Committee</b></th>
+<th style="background-color: LightBlue"> <b>Elo</b></th> <th style="background-color: LightBlue"><b>Score</b></th>
+<th style="background-color: LightGreen"> <b>Glicko 2</b></th> <th style="background-color: LightGreen"><b>Score</b> </th><th style="background-color: LightGreen"><b>Dev.</b></th>
+<th style="background-color: LightPink"> <b>BG</b></th> <th style="background-color: LightPink"><b>Score</b></th>
+<th style="background-color: LightYellow"> <b>PageRank</b></th> <th style="background-color: LightYellow"><b>Score</b></th>
+<th style="background-color: LightSalmon"> <b>HITS</b></th> <th style="background-color: LightSalmon"><b>Score</b></th></tr>
+
+<tr><td>1</td><td>LSU</td><td>Ohio State</td><td>1930.35</td><td>LSU</td><td>2177.13</td><td>133.3</td><td>LSU</td><td>170</td><td>Oklahoma</td><td>439.33</td><td>Clemson</td><td>160.53</td></tr>
+<tr><td>2</td><td>Ohio State</td><td>LSU</td><td>1927.1</td><td>Ohio State</td><td>2175.98</td><td>128.11</td><td>Georgia</td><td>167</td><td>Kansas State</td><td>416.42</td><td>Ohio State</td><td>160.53</td></tr>
+<tr><td>3</td><td>Clemson</td><td>Clemson</td><td>1884.14</td><td>Clemson</td><td>2098.62</td><td>135.25</td><td>Ohio State</td><td>163</td><td>Ohio State</td><td>247.38</td><td>LSU</td><td>160.53</td></tr>
+<tr><td>4</td><td>Oklahoma</td><td>Memphis</td><td>1883.75</td><td>Oklahoma</td><td>2081.14</td><td>119.68</td><td>Penn State</td><td>160</td><td>LSU</td><td>218.44</td><td>Appalachian State</td><td>135.67</td></tr>
+<tr><td>5</td><td>Georgia</td><td>Oklahoma</td><td>1874.69</td><td>Memphis</td><td>2065.32</td><td>123.61</td><td>Michigan</td><td>158</td><td>Baylor</td><td>193.15</td><td>Boise State</td><td>135.67</td></tr>
+<tr><td>6</td><td>Oregon</td><td>Appalachian State</td><td>1812.39</td><td>Penn State</td><td>1998.85</td><td>127.77</td><td>Notre Dame</td><td>147</td><td>Temple</td><td>170.61</td><td>Memphis</td><td>133.89</td></tr>
+<tr><td>7</td><td>Baylor</td><td>Boise State</td><td>1807.43</td><td>Oregon</td><td>1993.69</td><td>121.56</td><td>Florida</td><td>118</td><td>Memphis</td><td>169.15</td><td>Oklahoma</td><td>133.89</td></tr>
+<tr><td>8</td><td>Wisconsin</td><td>Oregon</td><td>1792.9</td><td>Georgia</td><td>1991.81</td><td>125.32</td><td>Navy</td><td>115</td><td>Texas</td><td>151.21</td><td>Oregon</td><td>107.24</td></tr>
+<tr><td>9</td><td>Florida</td><td>Notre Dame</td><td>1780.42</td><td>Boise State</td><td>1984.68</td><td>132.95</td><td>Auburn</td><td>111</td><td>Georgia</td><td>142.77</td><td>Georgia</td><td>105.45</td></tr>
+<tr><td>10</td><td>Penn State</td><td>Georgia</td><td>1780.38</td><td>Baylor</td><td>1983.74</td><td>126.03</td><td>SMU</td><td>100</td><td>Oklahoma State</td><td>137.5</td><td>Utah</td><td>101.88</td></tr>
+<tr><td>11</td><td>Utah</td><td>Navy</td><td>1768.75</td><td>Appalachian State</td><td>1982.46</td><td>131.68</td><td>Oregon</td><td>93</td><td>Wisconsin</td><td>115.14</td><td>Baylor</td><td>92.95</td></tr>
+<tr><td>12</td><td>Auburn</td><td>Air Force</td><td>1762.78</td><td>Notre Dame</td><td>1968.72</td><td>126.07</td><td>USC</td><td>86</td><td>West Virginia</td><td>107.35</td><td>Minnesota</td><td>89.54</td></tr>
+<tr><td>13</td><td>Alabama</td><td>Utah</td><td>1750.44</td><td>Utah</td><td>1961.37</td><td>121.67</td><td>Utah</td><td>81</td><td>BYU</td><td>104.86</td><td>Notre Dame</td><td>87.75</td></tr>
+<tr><td>14</td><td>Michigan</td><td>Florida Atlantic</td><td>1744.23</td><td>Florida</td><td>1958.16</td><td>132.14</td><td>California</td><td>79</td><td>Oregon</td><td>96.24</td><td>Alabama</td><td>84.18</td></tr>
+<tr><td>15</td><td>Notre Dame</td><td>Penn State</td><td>1743.85</td><td>Wisconsin</td><td>1953.66</td><td>122.91</td><td>Iowa</td><td>76</td><td>Georgia Southern</td><td>94.09</td><td>Air Force</td><td>84.18</td></tr>
+<tr><td>16</td><td>Iowa</td><td>Florida</td><td>1741.85</td><td>Navy</td><td>1953.64</td><td>127.85</td><td>Washington State</td><td>75</td><td>Auburn</td><td>92.22</td><td>SMU</td><td>84.18</td></tr>
+<tr><td>17</td><td>Memphis</td><td>Wisconsin</td><td>1737.6</td><td>Michigan</td><td>1948.62</td><td>124.13</td><td>Boise State</td><td>70</td><td>Cincinnati</td><td>91.83</td><td>Navy</td><td>84.18</td></tr>
+<tr><td>18</td><td>Minnesota</td><td>Baylor</td><td>1731.16</td><td>SMU</td><td>1933.21</td><td>132.63</td><td>Clemson</td><td>67</td><td>Michigan</td><td>91.63</td><td>Penn State</td><td>82.39</td></tr>
+<tr><td>19</td><td>Boise State</td><td>Michigan</td><td>1728.5</td><td>Auburn</td><td>1923.82</td><td>127.85</td><td>Oklahoma</td><td>65</td><td>Notre Dame</td><td>90.47</td><td>Florida</td><td>80.61</td></tr>
+<tr><td>20</td><td>Appalachain State</td><td>Iowa</td><td>1723.57</td><td>Air Force</td><td>1919.14</td><td>127.61</td><td>Indiana</td><td>61</td><td>Penn State</td><td>88.92</td><td>UCF</td><td>73.62</td></tr>
+<tr><td>21</td><td>Cincinnati</td><td>Auburn</td><td>1722.53</td><td>Minnesota</td><td>1912.2</td><td>133.86</td><td>Air Force</td><td>58</td><td>Appalachian State</td><td>85.11</td><td>San Diego State</td><td>70.04</td></tr>
+<tr><td>22</td><td>USC</td><td>SMU</td><td>1706.03</td><td>Alabama</td><td>1905.39</td><td>135.89</td><td>Nebraska</td><td>57</td><td>Minnesota</td><td>84.58</td><td>Louisiana</td><td>69.89</td></tr>
+<tr><td>23</td><td>Navy</td><td>Cincinnati</td><td>1705.69</td><td>Iowa</td><td>1900.24</td><td>126.42</td><td>Temple</td><td>49</td><td>South Carolina</td><td>79.94</td><td>Florida Atlantic</td><td>69.89</td></tr>
+<tr><td>24</td><td>Virginia</td><td>USC</td><td>1694.15</td><td>Cincinnati</td><td>1892.5</td><td>121.71</td><td>Baylor</td><td>48</td><td>Iowa</td><td>78.57</td><td>Louisiana Tech</td><td>68.26</td></tr>
+<tr><td>25</td><td>Oklahoma State</td><td>Alabama</td><td>1688.82</td><td>USC</td><td>1859.68</td><td>118.26</td><td>Stanford</td><td>47</td><td>Florida</td><td>77.77</td><td>Wisconsin</td><td>66.31</td></tr>
+</table>
+
+<h2 style="text-align:left;font-size: 24px; margin-left: 50px; margin-right:50px"> The 2020-2021 Season </h2>
+
+<p style="text-align: justify;font-size: 16px;margin-left: 50px;margin-right:50px"> The tables below show the rating results for each system at the conclusion of the 2020/2021 college football
+regular season. The RMSE numbers as calculated as previously described. Although the program generates a rating and ranking for > 200 college Div. 1 football teams, only the top 25 from the
+committee and for each system are shown in the table. </p>
+
+<p style="text-align: justify;font-size: 16px;margin-left: 50px;margin-right:50px"> <b> Note:</b> In 2020/2021, with Covid-19 forcing many conferences to only play against teams within the conference, the graph-based rating systems suffered. For example, the BeatGraph approach purposefully discards some results
+in an attempt to create an acyclic graph. As a result, despite Alabama having a perfect score in the SEC, some results were discarded and they were ranked lower
+than others who simply played teams outside of their conference. Another challenge for the rating systems in the 2020/2021 season was that many
+teams did not play the same number of games, which is crucial when the regular season is only about a dozen games to begin with.
+</p>
+
+<p style="text-align: center"> <u>Table 5: RMSE vs. Playoff Selection Committee Rankings for Each Model (2020-21)</u> </p>
+
+<table style="width: 75%;font-size: 12px;margin-right:auto;margin-left: auto">
+<tr>
+<th style="background-color: LightBlue"> <b> Elo </b> </th>
+<th style="background-color: LightGreen"> <b> Glicko 2 </b> </th>
+<th style="background-color: LightPink"><b> BG </b> </th>
+<th style="background-color: LightYellow"> <b> PageRank </b> </th>
+<th style="background-color: LightSalmon"> <b> HITS </b> </th>
+</tr>
+<tr>
+<th> 11.69 </th>
+<th> 11.02 </th>
+<th> 43.71 </th>
+<th> 19.52</th>
+<th> 9.84 </th>
+</tr>
+</table>
+
+<p style="text-align: center"> <u>Table 6: College Football 2020-2021 Season (Regular Season Only) </u> </p>
+
+<table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
+<tr>
+<th style="background-color: White"><b>Rank</b></th>
+<th style="background-color: Gold"> <b>Committee</b></th>
+<th style="background-color: LightBlue"> <b>Elo</b></th> <th style="background-color: LightBlue"><b>Score</b></th>
+<th style="background-color: LightGreen"> <b>Glicko 2</b></th> <th style="background-color: LightGreen"><b>Score</b> </th><th style="background-color: LightGreen"><b>Dev.</b></th>
+<th style="background-color: LightPink"> <b>BG</b></th> <th style="background-color: LightPink"><b>Score</b></th>
+<th style="background-color: LightYellow"> <b>PageRank</b></th> <th style="background-color: LightYellow"><b>Score</b></th>
+<th style="background-color: LightSalmon"> <b>HITS</b></th> <th style="background-color: LightSalmon"><b>Score</b></th></tr>
+
+<tr><td>1</td><td>Alabama</td><td>Coastal Carolina</td><td>1857.55</td><td>Cincinnati</td><td>2092.7</td><td>148.96</td><td>Coastal Carolina</td><td>54</td><td>Clemson</td><td>423.27</td><td>Coastal Carolina</td><td>194.88</td></tr>
+<tr><td>2</td><td>Clemson</td><td>Cincinnati</td><td>1829.16</td><td>Coastal Carolina</td><td>2081.39</td><td>145.57</td><td>Oklahoma</td><td>50</td><td>Notre Dame</td><td>414.66</td><td>Alabama</td><td>194.88</td></tr>
+<tr><td>3</td><td>Ohio State</td><td>Alabama</td><td>1825.76</td><td>Alabama</td><td>2060.45</td><td>153.97</td><td>TCU</td><td>47</td><td>Ball State</td><td>192.47</td><td>Cincinnati</td><td>159.45</td></tr>
+<tr><td>4</td><td>Notre Dame</td><td>Clemson</td><td>1799.04</td><td>San Jose State</td><td>2059.23</td><td>170.39</td><td>BYU</td><td>44</td><td>Buffalo</td><td>175.54</td><td>Clemson</td><td>146.06</td></tr>
+<tr><td>5</td><td>Texas A&M</td><td>San Jose State</td><td>1777.77</td><td>Clemson</td><td>2026.37</td><td>137.56</td><td>Texas</td><td>43</td><td>Miami (OH)</td><td>174.76</td><td>Notre Dame</td><td>146.06</td></tr>
+<tr><td>6</td><td>Oklahoma</td><td>BYU</td><td>1760.24</td><td>Notre Dame</td><td>2001.18</td><td>141.82</td><td>Oklahoma State</td><td>41</td><td>Coastal Carolina</td><td>150.97</td><td>BYU</td><td>142.95</td></tr>
+<tr><td>7</td><td>Florida</td><td>Notre Dame</td><td>1754.02</td><td>Ohio State</td><td>1996.41</td><td>170.66</td><td>Cincinnati</td><td>39</td><td>Oregon</td><td>121.35</td><td>Liberty</td><td>134.57</td></tr>
+<tr><td>8</td><td>Cincinnati</td><td>Louisiana</td><td>1749.79</td><td>BYU</td><td>1986.14</td><td>146.24</td><td>Clemson</td><td>34</td><td>Iowa State</td><td>109.73</td><td>Louisiana</td><td>125.24</td></tr>
+<tr><td>9</td><td>Georgia</td><td>Ohio State</td><td>1747.55</td><td>Louisiana</td><td>1934.81</td><td>148.57</td><td>Louisiana</td><td>33</td><td>Oklahoma</td><td>106.67</td><td>San Jose State</td><td>124.02</td></tr>
+<tr><td>10</td><td>Iowa State</td><td>Texas A&M</td><td>1735.68</td><td>Texas A&M</td><td>1897.49</td><td>150.11</td><td>Tulsa</td><td>32</td><td>Stanford</td><td>95.72</td><td>Army</td><td>112.8</td></tr>
+<tr><td>11</td><td>Indiana</td><td>Oklahoma</td><td>1733.08</td><td>Tulsa</td><td>1892.76</td><td>155.78</td><td>UCF</td><td>30</td><td>Oklahoma State</td><td>81.58</td><td>Texas A&M</td><td>107.52</td></tr>
+<tr><td>12</td><td>Coastal Carolina</td><td>Ball State</td><td>1728.34</td><td>Ball State</td><td>1879.08</td><td>152.54</td><td>Appalachian State</td><td>30</td><td>Utah</td><td>80.89</td><td>Ohio State</td><td>106.3</td></tr>
+<tr><td>13</td><td>North Carolina</td><td>Army</td><td>1705.9</td><td>Indiana</td><td>1873.64</td><td>163.66</td><td>Virginia Tech</td><td>30</td><td>Cincinnati</td><td>79.14</td><td>Oklahoma</td><td>104.41</td></tr>
+<tr><td>14</td><td>Northwestern</td><td>North Carolina</td><td>1701.47</td><td>Miami</td><td>1869.83</td><td>141.43</td><td>Georgia State</td><td>28</td><td>Louisiana</td><td>77.58</td><td>Ball State</td><td>100.08</td></tr>
+<tr><td>15</td><td>Iowa</td><td>Liberty</td><td>1684.24</td><td>North Carolina</td><td>1851.8</td><td>131.67</td><td>NC State</td><td>28</td><td>Oregon State</td><td>77.46</td><td>Marshall</td><td>99.14</td></tr>
+<tr><td>16</td><td>BYU</td><td>Indiana</td><td>1681.46</td><td>Liberty</td><td>1844.53</td><td>156.95</td><td>Virginia</td><td>25</td><td>Alabama</td><td>76.3</td><td>Indiana</td><td>87.64</td></tr>
+<tr><td>17</td><td>USC</td><td>NC State</td><td>1670.11</td><td>Oklahoma</td><td>1841.03</td><td>136.39</td><td>Boston College</td><td>23</td><td>North Carolina</td><td>74.66</td><td>North Carolina</td><td>85.75</td></tr>
+<tr><td>18</td><td>Miami (FL)</td><td>Tulsa</td><td>1667.26</td><td>Georgia</td><td>1827.73</td><td>144.78</td><td>San Jose State</td><td>22</td><td>Kansas State</td><td>71.74</td><td>Miami</td><td>85.75</td></tr>
+<tr><td>19</td><td>Louisiana</td><td>Miami</td><td>1662.99</td><td>Army</td><td>1826.71</td><td>133.56</td><td>Georgia Southern</td><td>21</td><td>Ohio State</td><td>69.64</td><td>Iowa</td><td>81.42</td></tr>
+<tr><td>20</td><td>Texas</td><td>Georgia</td><td>1661.96</td><td>Buffalo</td><td>1823.82</td><td>179.19</td><td>Pittsburgh</td><td>20</td><td>USC</td><td>67.09</td><td>Northwestern</td><td>81.42</td></tr>
+<tr><td>21</td><td>Oklahoma State</td><td>Iowa State</td><td>1661.53</td><td>NC State</td><td>1816.55</td><td>136.74</td><td>Stanford</td><td>20</td><td>Miami</td><td>66.92</td><td>NC State</td><td>76.42</td></tr>
+<tr><td>22</td><td>San Jose State</td><td>Appalachian State</td><td>1655.66</td><td>Boise State</td><td>1799.52</td><td>164.36</td><td>Washington</td><td>18</td><td>Colorado</td><td>62.05</td><td>USC</td><td>76.14</td></tr>
+<tr><td>23</td><td>NC State</td><td>Iowa</td><td>1651.3</td><td>Appalachian State</td><td>1793.31</td><td>132.65</td><td>Boise State</td><td>17</td><td>TCU</td><td>61.53</td><td>Nevada</td><td>72.09</td></tr>
+<tr><td>24</td><td>Tulsa</td><td>Buffalo</td><td>1638.17</td><td>Iowa State</td><td>1790.24</td><td>127.52</td><td>Utah</td><td>16</td><td>California</td><td>60.02</td><td>Buffalo</td><td>69.92</td></tr>
+<tr><td>25</td><td>Oregon</td><td>UAB</td><td>1622.23</td><td>USC</td><td>1780.53</td><td>180.49</td><td>Florida Atlantic</td><td>14</td><td>NC State</td><td>59.71</td><td>SMU</td><td>68.04</td></tr>
+</table>
+<div>
+
+<hr style="height:2px;background: black;">
+
+<h2 style="text-align:center;font-size: 32px;"> <a name="Game_Predictions" College Football Game Prediction Summary </a>
+College Football Game Prediction Summary </h2>
+
+<p style = "text-align:center; margin-left: 50px;margin-right:50px"> Return to <a href="#Top_of_page"> Top</a></p>
+
+<p style="text-align:justify; margin-left: 50px;margin-right:50px"> In this section, I describe the models I use to predict the winner of upcoming NCAA College D1 football games.
+I use the R programming language and machine learning to build models based on classification algorithms described at <a href="https://cran.r-project.org/"> cran.r-project.org </a>.
+The algorithms classify (predict) games not yet played as either a home team victory or an away team victory. I use 4937 past games between season 2010 to 2020 for training
+and a different set of 670 past games over the same years for testing. For now, I build each model using data for the following variables: </p>
+
+<ul style="margin-left: 50px;margin-right:50px">
+<li> <b>P5_DIFF:</b> "0" If both or no teams are in a Power 5 conf. "1" if only the home team is in P5. "-1" if only the away team is in P5.</li>
+<li> <b>H_W_M_A_W:</b> (# of games the home team has won this season) - (# of games the away team has won this season)</li>
+<li> <b>H_L_M_A_L:</b> (# of games the home team has lost this season) - (# of games the away team has lost this season)</li>
+<li> <b>H_APS_M_A_APS:</b> (Avg. # of points the home team scored this season) - (Avg. # of points the away team scored this season)</li>
+<li> <b>H_APLI_M_A_APLI:</b> (Avg. # of points the home team conceded this season) - (Avg. # of points the away team conceded this season)</li>
+<li> <b>H_P5W_M_A_P5W:</b> (# of P5 teams the home team has beaten this season) - (# of P5 teams the away team has beaten this season)</li>
+<li> <b>GLICKO_DIFF:</b> (Home team's Glicko 2 rating score) - (Away team's Glicko 2 rating score)</li>
+<li> <b>RR_DIFF:</b> (Home team's recruit rank) - (Visiting team's recruit rank). Recruit ranking from 247sports.com.</li>
+</ul>
+
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong> Random Forest: </strong>
+Random Forest is a machine learning method that constructs many decision trees at training time as described <a href="https://en.wikipedia.org/wiki/Random_forest"> here </a>.
+I use the R programming language to build a model based on the ‘randomForest’ package described <a href="https://cran.r-project.org/web/packages/randomForest/randomForest.pdf"> here </a>.
+As shown in Figure 2 on the left side, for our test runs, the "out of bag" error converges to about 26% error rate (blue line) overall with a lower error rate when
+it predicts a home victory (~18%) and a higher error rate when it predicts an away victory (38%). Also shown in the figure on the right side is the variable importance plot.
+The mean decrease accuracy plot shows how much accuracy the model will lose if the variable is not included, higher values indicate the most important variables. The mean decrease in gini plot
+shows how much each variable contributes to the homogeneity of the trees in the model, higher values indicate the most important variables.</p>
+
+<figure><img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/Random_Forest_OOB_ErrorRate.png" width="45%" height="auto">
+<img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/Random_Forest_VariableImportance.png" width="45%" height="auto">
+<figcaption> Figure 2: Error Rate, Variable Importance and Decrease in Gini for Random Forest Example </figcaption> </figure></p>
+
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong> Support Vector Machines (SVM): </strong>
+A Support Vector Machine is a supervised machine learning algorithm. In my case, I use it for classification purposes where the SVMs attempt to find a
+hyperplane that best divides the dataset into two classes. More details on SVMs can be found <a href="https://en.wikipedia.org/wiki/Support-vector_machine"> here </a>
+I use the R programming langauge to build a model based on the ‘e1071’ package described <a href="https://cran.r-project.org/web/packages/e1071/index.html"> here </a>.
+</p>
+
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong> Neural Net: </strong>
+An artificial Neural Network is a machine learning model inspired by the neural networks in the brain. In our case, the first hidden layer has four neurons and the second hidden layer has three neurons.
+The figure below shows an example of the Neural Network results from one of my runs. More details on a Neural Net can be found <a href="https://en.wikipedia.org/wiki/Neural_network"> here </a>
+I use the R programming language to build a model based on the ‘neural net’ package described <a href="https://cran.r-project.org/web/packages/neuralnet/neuralnet.pdf"> here </a>.
+</p>
+<figure><center><img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/NeuralNetwork-1.png" width="40%" height="auto"></center>
+<figcaption> Figure 3: An Example of a Neural Network using Our Variables and Test Data </figcaption> </figure>
+
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong> Decision Tree: </strong>
+The decision tree is a predictive model that we use to build a classification tree based on our variables.
+As shown in th figure below, each node represents an "if-else" statement that can be followed to determine whether the decision tree predicts a home or away win.
+More details on decision trees can be found <a href="https://en.wikipedia.org/wiki/Decision_tree_learning"> here </a>
+I use the R programming language to build a model based on the ‘partykit’ package described <a href="https://cran.r-project.org/web/packages/partykit/index.html"> here </a>.</p>
+<figure><center><img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/Decision_Tree_Plot.png" width="70%" height="auto"></center>
+<figcaption> Figure 4: An Example of a Decision Tree using Our Variables and Test Data </figcaption> </figure>
+</p>
+
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong> Naive Bayes: </strong>
+A Naive Bayes classifier is a probablistic machine learning model that is using for classification tasks based on the Bayes theorem.
+More details on Naive Bayes can be found <a href="https://en.wikipedia.org/wiki/Naive_Bayes_classifier"> here </a>.
+I use the R programming language to build a model based on the ‘naivebayes’ package described <a href="https://cran.r-project.org/web/packages/naivebayes/naivebayes.pdf"> here </a>.
+The figures below show a probability density plot for each variable used in the model.
+</p>
+<figure><center><img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/NaiveBayes/NAIVE_BAYES_RR_DIFF.png" width="30%" height="auto">
+<img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/NaiveBayes/Naive_Bayes_APLI.png" width="30%" height="auto">
+<img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/NaiveBayes/Naive_Bayes_APS.png" width="30%" height="auto"></center></figure>
+
+<figure><center><img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/NaiveBayes/Naive_Bayes_Glicko_Diff.png" width="30%" height="auto">
+<img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/NaiveBayes/Naive_Bayes_Losses.png" width="30%" height="auto">
+<img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/NaiveBayes/Naive_Bayes_P5W.png" width="30%" height="auto"></center></figure>
+
+<figure><center><img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/NaiveBayes/Naive_Bayes_P5_DIFF.png" width="30%" height="auto">
+<img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/NaiveBayes/Naive_Bayes_Wins.png" width="30%" height="auto"></center>
+<figcaption> Figure 5: Naive Bayes Probability Density Plots </figcaption></figure>
+
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">  <strong> k-Nearest Neighbor (k-NN): </strong>
+k-NN is a non-parametric classification method. Since we are solving a classification problem we are using k-NN classification and the output is either "away" or "home".
+An object is classified based on the class most common among its "k" nearest neighbors where "k" is a small positive integer. More details can be found
+<a href="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm"> here </a>  I use the R programming language to build a model based on the ‘class’ package described
+<a href="https://cran.r-project.org/web/packages/class/class.pdf"> here </a>.
+</p>
+
+
+<h2 style="text-align:center;font-size: 32px;"> Game Prediction Training and Test Results </h2>
+
+<p style="text-align:justify; margin-left: 50px;margin-right:50px">
+In this section, I summarize the training and test results for each machine learning model we just described. As noted before, I used 4937 past games from seasons 2010 to 2020
+for training and a different set of 670 past games in the same years for testing. The figures below show the confusion matrix and misclassification % for the training and test data.
+In the matrix the upper left and lower right quadrants represent where the prediction matched the result for each model while the opposite quadrants represent where the prediction did not.</p>
+
+<figure><center><img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/Screen%20Shot%202021-08-22%20at%2011.15.29%20AM.png" width="45%" height="auto">
+<img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/Screen%20Shot%202021-08-22%20at%2011.21.04%20AM.png" width="45%" height="auto">
+</center></figure>
 <br/>
 
-<p style="text-align: center"> <u>Table 4: College Football 2021/2022 Week 0 Predictions using MLR </u> </p>
+<figure><center><img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/Screen%20Shot%202021-08-22%20at%2011.21.47%20AM.png" width="45%" height="auto">
+<img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/Screen%20Shot%202021-08-22%20at%2010.34.24%20AM.png" width="45%" height="auto">
+</center></figure>
+<br/>
 
-<table style="width: 50%;font-size: 14px;margin-right:auto;margin-left: auto">
-<tr>
-<th style="background-color: lightsalmon;"> <b> Home Team </b> </th>
-<th style="background-color: lightsalmon;"> <b> Win % </b> </th>
-<th style="background-color: lightsalmon;"> <b> Away Team </b> </th>
-<th style="background-color: lightsalmon;"> <b> Win % </b> </th>
-</tr>
-<tr>
-<th> Nebraska </th>
-<th> N/A </th>
-<th> Illinois </th>
-<th> N/A </th>
-</tr>
-<tr>
-<th> UConn </th>
-<th> N/A </th>
-<th> Fresno State </th>
-<th> N/A </th>
-</tr>
-<tr>
-<th> Hawaii </th>
-<th> N/A </th>
-<th> UCLA </th>
-<th> N/A </th>
-</tr>
-<tr>
-<th> UTEP </th>
-<th> N/A </th>
-<th> New Mexico State </th>
-<th> N/A </th>
-</tr>
-<tr>
-<th> Southern Utah </th>
-<th> N/A </th>
-<th> San Jose State </th>
-<th> N/A </th>
-</tr>
-</table>
-
+<figure><center><img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/Screen%20Shot%202021-08-23%20at%2010.55.20%20AM.png" width="45%" height="auto">
+<img src="https://raw.githubusercontent.com/ColinAslett/ColinAslett.github.io/main/Pictures/Screen%20Shot%202021-08-23%20at%2010.56.31%20AM.png" width="45%" height="auto">
+</center></figure>
+<br/>
+<figcaption> Figure 6: Confusion Matrix Each Algorithm using Training and Test Data </figcaption></figure>
 </div>
 
 <hr style="height:2px;background: black;">
 
- <div>
+<div>
 
-<h2 style="text-align:center;font-size: 32px"> Rating System Performance </h2>
-
-<p style="text-align:justify;font-size: 16px;margin-left: 50px;margin-right:50px"> <b> Predicton Accuracy (under construction). </b> This section
-will show how well each rating system predicts the  winner of a college football game. It is still a work in progress.  </p>
-       
-<p style="text-align: justify;font-size: 16px;margin-left: 50px;margin-right:50px"> <b> Technical Discussion (under construction): </b> This section
-will show how each rating system is performing from an analytical standpoint. It will include the brier score, log loss, and many graphs. </p>
-
- </div>
-        <hr style="height:2px;background: black;">
-
-        <div>
 <h2 style="text-align:center;font-size: 32px"> Other Projects </h2>
 <p style = "text-align: center ;margin-left: 50px;margin-right:50px"> Please contact me if you want to learn more about some other projects I have completed, such as:
 
