@@ -52,12 +52,11 @@ In college, I was a varsity athlete and I still follow a disciplined strength an
 created a passion for developing sports analytics software.
 <br/> <br/>
 This website gives results from the different NCAA Division 1 football rating and game prediction systems that I have been experimenting with.
-For the college team rankings, I have developed programs using Java to read the results of each NCAA D1 college football match during the season from
-<a href="https://collegefootballdata.com/"> collegefootballdata.com</a> and then generate a rating and relative ranking of each team using five different rating
-systems (Elo, Glicko 2, Beat Graph, Page Rank and HITS). For the game predictions, I extracted 10 years of previous NCAA D1 football game results and use the R programming language and machine learning to build models
+For the game predictions, I extracted 10 years of previous NCAA D1 football game results and use the R programming language and machine learning to build models
 based on classification algorithms (Random Forest, SVM, Neural Net, Decision Tree, Naive Bayes and k-NN) described at <a href="https://cran.r-project.org/"> cran.r-project.org </a>. The algorithms classify (predict) games not yet
-played as either a home team victory or an away team victory. At first, I am keeping things simple. However, I will continue to update this site as I experiment with the approaches.
-</p>
+played as either a home team victory or an away team victory. For the college team rankings, I have developed programs using Java to read the results of each NCAA D1 college football match during the season from
+<a href="https://collegefootballdata.com/"> collegefootballdata.com</a> and then generate a rating and relative ranking of each team using five different rating
+systems (Elo, Glicko 2, Beat Graph, Page Rank and HITS). I have also included updated "Team Power Ratings" based on in-game performance metrics and "Player Performance Ratings" based on individual performance metrics.
 
 <p style = "text-align:center; margin-left: 20px;margin-right:20px"> About me:
 <button type="button"> <a href="https://www.linkedin.com/in/colin-aslett-10384a201/"> LinkedIn </a> </button>
@@ -65,9 +64,13 @@ The code:
 <button type="button"> <a href="https://github.com/ColinAslett/CollegeFootballRATINGSystem"> GitHub </a> </button>
 </p>
 
-<p style = "text-align:center; margin-left: 20px;margin-right:20px"> Go to: <a href="#Current_Game_Results"> Current Game Predictions </a></p>
+<p style = "text-align:center; margin-left: 20px;margin-right:20px"> Go to: <a href="#Current_Game_Results"> Current and Completed Game Predictions </a></p>
 
-<p style = "text-align:center; margin-left: 20px;margin-right:20px"> Go to: <a href="#Current_Rankings"> Current Team Rankings </a></p>
+<p style = "text-align:center; margin-left: 20px;margin-right:20px"> Go to: <a href="#Current_Rankings"> Current Team Rankings</a></p>
+
+<p style = "text-align:center; margin-left: 20px;margin-right:20px"> Go to: <a href="#Current_Team_Power"> Current Team Power Ratings </a></p>
+
+<p style = "text-align:center; margin-left: 20px;margin-right:20px"> Go to: <a href="#Current_Player_Power"> Current Player Performance Ratings </a></p>
 
 <p style = "text-align:center; margin-left: 20px;margin-right:20px"> Go to: <a href="#Summary_of_the_Rating_Systems"> Rating Systems Summary & Past Results</a></p>
 
@@ -75,58 +78,10 @@ The code:
   </div>
 
 <hr style="height:2px;background: black;">
-<h2 style="text-align:center;font-size: 32px;"> <a name="Current_Game_Results"> </a> Current 2021-22 Game Predictions & Team Rankings </h2>
+<h2 style="text-align:center;font-size: 32px;"> <a name="Current_Game_Results"> </a> Current 2021-22 Game Predictions</h2>
 <p style = "text-align:center; margin-left: 50px;margin-right:50px"> Return to <a href="#Top_of_page"> Top</a></p>
 
-<h2 style="text-align:center;font-size: 24px;"> Week 0 Selected Game Results vs. Predictions</h2>
-
-<table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
-<tr>
-<th style="background-color: LightGreen;"> <b> HOME TEAM </b> </th>
-<th style="background-color: LightYellow;"> <b> AWAY TEAM </b> </th>
-<th style="background-color: lightBlue;"> <b> Random Forest </b> </th>
-<th style="background-color: lightBlue;"> <b> SVM </b> </th>
-<th style="background-color: lightBlue;"> <b> Neural Net </b> </th>
-<th style="background-color: lightBlue;"> <b> Decision Tree </b> </th>
-<th style="background-color: lightBlue;"> <b> Naive Bayes</b> </th>
-<th style="background-color: lightBlue;"> <b> k-NN  </b> </th>
-</tr>
-<tr><th><b>Illinois (W)</b></th><th>Nebraska</th><th>AWAY</th><th>AWAY</th><th>AWAY (93%)</th><th>AWAY</th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th><b>Fresno State (W)</b></th><th>UConn</th><th><b>HOME</b></th><th>AWAY</th><th><b>HOME (65%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY</th></tr>
-<tr><th><b>UCLA (W)</b></th><th>Hawaii</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (62%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th>New Mexico State</th><th><b>UTEP (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (92%)</th><th><b>AWAY</b></th><th>HOME</th><th><b>AWAY</b></th></tr>
-<tr><th><b>San Jose State (W)</b></th><th>Southern Utah</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (93%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-</table>
-
-<h2 style="text-align:center;font-size: 24px;"> Week 1 Selected Game Predictions</h2>
-
-<table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
-<tr>
-<th style="background-color: LightGreen;"> <b> HOME TEAM </b> </th>
-<th style="background-color: LightYellow;"> <b> AWAY TEAM</b> </th>
-<th style="background-color: lightBlue;"> <b> Random Forest </b> </th>
-<th style="background-color: lightBlue;"> <b> SVM </b> </th>
-<th style="background-color: lightBlue;"> <b> Neural Net </b> </th>
-<th style="background-color: lightBlue;"> <b> Decision Tree </b> </th>
-<th style="background-color: lightBlue;"> <b> Naive Bayes</b> </th>
-<th style="background-color: lightBlue;"> <b> k-NN  </b> </th>
-</tr>
-<tr><th>Minnesota</th><th><b> Ohio State (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (93%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
-<tr><th><b>Virginia Tech (W)</b></th><th>North Carolina</th><th>AWAY</th><th>AWAY</th><th>AWAY (93%)</th><th>AWAY</th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th><b>UCF (W)</b></th><th>Boise State</th><th><b>HOME</b></th><th>AWAY</th><th><b>HOME (60%)</b></th><th><b>HOME</b></th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th>Northwestern</th><th><b>Michigan State (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (92%)</th><th>HOME</th><th>HOME</th><th>HOME</th></tr>
-<tr><th>Wisconsin</th><th><b>Penn State (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (92%)</th><th><b>AWAY</b></th><th>HOME</th><th>HOME</th></tr>
-<tr><th>Tulane</th><th><b>Oklahoma (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th>HOME (53%)</th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
-<tr><th><b>Oregon (W)</b></th><th>Fresno State</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (93%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th><b>Iowa (W)</b></th><th>Indiana</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (60%)</b></th><th>AWAY</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th><b>Cincinnati (W)</b></th><th>Miami(OH)</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (93%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th><b>Texas (W)</b></th><th>Louisiana</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (62%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th><b>USC (W)</b></th><th>San Jose State</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (93%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th><b>UCLA (W)</b></th><th>LSU</th><th>AWAY</th><th><b>HOME</b></th><th>AWAY (93%)</th><th>AWAY</th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th>Florida State</th><th><b>Notre Dame (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (76%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
-</table>
-
-<h2 style="text-align:center;font-size: 24px;"> Week 2 Selected Game Predictions</h2>
+<h2 style="text-align:center;font-size: 24px;"> Upcoming Week 8 Selected Game Predictions</h2>
 
 <table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
 <tr>
@@ -139,19 +94,26 @@ The code:
 <th style="background-color: lightBlue;"> <b> Naive Bayes</b> </th>
 </tr>
 
-<tr><th><b>Coastal Carolina (W)</b></th><th>Kansas</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (50.2%)</th><th><b>HOME</b></th><th>AWAY</th></tr>
-<tr><th><b>Oklahoma State (W)</b></th><th>Tulsa</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (88.2%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th>Ohio State</th><th><b>Oregon (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (76.9%)</th><th>HOME</th><th>HOME</th></tr>
-<tr><th>Navy</th><th><b>Air Force (W)</b></th><th><b>AWAY</b></th><th>HOME</th><th><b>AWAY (84.9%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
-<tr><th>Iowa State</th><th><b>Iowa (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th>HOME (72.4%)</th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
-<tr><th>Rice</th><th><b>Houston (W)</b></th><th>HOME</th><th>HOME</th><th><b>AWAY (73.7%)</b></th><th>HOME</th><th>HOME</th></tr>
-<tr><th><b>Arkansas (W)</b></th><th>Texas</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (74.0%)</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th><b>BYU (W)</b></th><th>Utah</th><th>AWAY</th><th>AWAY</th><th><b>HOME (72.3%)</b></th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th>USC</th><th><b>Stanford (W)</b></th><th>HOME</th><th>HOME</th><th><b>AWAY (89%)</b></th><th>HOME</th><th>HOME</th></tr>
-<tr><th><b>ASU (W)</b></th><th>UNLV</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (88%)</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th>Appalachian State</th><th>Coastal Carolina</th><th>AWAY</th><th>AWAY</th><th>AWAY(72.6%)</th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th>SMU</th><th>Tulane</th><th>HOME</th><th>HOME</th><th>HOME (89.8%)</th><th>HOME</th><th>HOME</th></tr>
+<tr><th>Arizona</th><th>Washington</th><th>AWAY</th><th>AWAY</th><th>AWAY (74.3%)</th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th>Navy</th><th>Cincinnati</th><th>AWAY</th><th>AWAY</th><th>AWAY (90.4%)</th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th>Penn State</th><th>Illinois</th><th>HOME</th><th>HOME</th><th>HOME (89.2%)</th><th>HOME</th><th>HOME</th></tr>
+<tr><th>Michigan</th><th>Northwestern</th><th>HOME</th><th>HOME</th><th>HOME (92.1%)</th><th>HOME</th><th>HOME</th></tr>
+<tr><th>Kansas</th><th>Oklahoma</th><th>AWAY</th><th>AWAY</th><th>AWAY (93.7%)</th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th>Purdue</th><th>Wisconsin</th><th>HOME</th><th>AWAY</th><th>HOME (70.0%)</th><th>HOME</th><th>HOME</th></tr>
+<tr><th>UCLA</th><th>Oregon</th><th>HOME</th><th>AWAY</th><th>HOME (56.0%)</th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th>Iowa State</th><th>Oklahoma State</th><th>AWAY</th><th>AWAY</th><th>AWAY (52.2%)</th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th>Pittsburgh</th><th>Clemson</th><th>HOME</th><th>HOME</th><th>HOME (73.2%)</th><th>HOME</th><th>HOME</th></tr>
+<tr><th>Ole Miss</th><th>LSU</th><th>HOME</th><th>HOME</th><th>HOME (72.0%)</th><th>HOME</th><th>HOME</th></tr>
+<tr><th>Washington State</th><th>BYU</th><th>HOME</th><th>HOME</th><th>HOME (63.9%)</th><th>AWAY</th><th>HOME</th></tr>
+<tr><th>Minnesota</th><th>Maryland</th><th>HOME</th><th>HOME</th><th>HOME (82.5%)</th><th>HOME</th><th>HOME</th></tr>
+<tr><th>Alabama</th><th>Tennessee</th><th>HOME</th><th>HOME</th><th>HOME (79.4%)</th><th>HOME</th><th>HOME</th></tr>
+<tr><th>Miami</th><th>NC State</th><th>AWAY</th><th>AWAY</th><th>AWAY (67.4%)</th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th>Indiana</th><th>Ohio State</th><th>AWAY</th><th>AWAY</th><th>AWAY (86.5%)</th><th>AWAY</th><th>AWAY</th></tr>
 </table>
 
-<h2 style="text-align:center;font-size: 24px;"> Week 3 Selected Game Predictions</h2>
+<h2 style="text-align:center;font-size: 24px;"> Completed Week 7 Selected Game Predictions</h2>
 
 <table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
 <tr>
@@ -164,76 +126,26 @@ The code:
 <th style="background-color: lightBlue;"> <b> Naive Bayes</b> </th>
 </tr>
 
-<tr><th>Florida</th><th><b>Alabama (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th>HOME (57.7%)</th><th>HOME</th><th><b>AWAY</b></th></tr>
-<tr><th><b>West Virginia (W)</b></th><th>Virginia Tech</th><th>AWAY</th><th>AWAY</th><th>AWAY (76.5%)</th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th>Indiana</th><th><b>Cincinnati (W)</b></th><th>HOME</th><th><b>AWAY</b></th><th>HOME (55.9%)</th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
-<tr><th><b>Oklahoma (W)</b></th><th>Nebraska</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (77.1%)</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th><b>Notre Dame (W)</b></th><th>Purdue</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (53.2%)</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th><b>Clemson (W)</b></th><th>Georgia Tech</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (82.3%)</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th>Washington State</th><th><b>USC (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (52.5%)</b></th><th>HOME</th><th><b>AWAY</b></th></tr>
-<tr><th><b>North Carolina (W)</b></th><th>Virginia</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (59.8%)</b></th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th><b>Penn State (W)</b></th><th>Auburn</th><th>AWAY</th><th>AWAY</th><th><b>HOME (62.4%)</b></th><th>AWAY</th><th><b>HOME</b></th></tr>
-<tr><th><b>Ole Miss (W)</b></th><th>Tulane</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (84.5%)</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th><b>BYU (W) </b></th><th>ASU</th><th>AWAY</th><th>AWAY</th><th><b>HOME (59.6%)</b></th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th>UCLA</th><th><b>Fresno State (W)</b></th><th>HOME</th><th>HOME</th><th><b>AWAY (74.2%)</b></th><th>HOME</th><th>HOME</th></tr>
+<tr><th>Syracuse</th><th><b>Clemson (W) </b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (56.0%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th><b>Oregon (W)</b></th><th>California</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (87.6%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th>San Jose State</th><th><b>San Diego State (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY(79.6%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th>Texas</th><th><b>Oklahoma State (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (66.1%)</th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th><b>Cincinnati (W)</b></th><th>UCF</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (84.6%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th>Indiana</th><th><b>Michigan State (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (83.0%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th>Arkansas</th><th><b>Auburn (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (56.6%)</th><th>HOME</th><th>HOME</th></tr>
+<tr><th>Iowa</th><th><b>Purdue (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (87.5%)</th><th>HOME</th><th>HOME</th></tr>
+<tr><th><b>Baylor (W)</b></th><th>BYU</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (92.3%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>Georgia (W)</b></th><th>Kentucky</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (78.5%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>UNC (W)</b></th><th>Miami</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (72.8%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th>Mississippi State</th><th><b>Alabama (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (71.4%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th>Tennessee</th><th><b>Ole Miss (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (55.2%)</th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th>Boston College</th><th><b>NC State (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (62.7%)</th><th>HOME</th><th>HOME</th></tr>
+<tr><th><b>Oklahoma (W)</b></th><th>TCU</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (83.0%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>Utah (W)</b></th><th>ASU</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (57.9%)</th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th>Washington</th><th><b>UCLA (W)</b></th><th><b>AWAY</b></th><th>HOME</th><th><b>AWAY (64.3%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
 </table>
 
-<h2 style="text-align:center;font-size: 24px;"> Week 4 Selected Game Predictions</h2>
-
-<table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
-<tr>
-<th style="background-color: LightGreen;"> <b> HOME TEAM </b> </th>
-<th style="background-color: LightYellow;"> <b> AWAY TEAM</b> </th>
-<th style="background-color: lightBlue;"> <b> Random Forest </b> </th>
-<th style="background-color: lightBlue;"> <b> SVM </b> </th>
-<th style="background-color: lightBlue;"> <b> Neural Net </b> </th>
-<th style="background-color: lightBlue;"> <b> Decision Tree </b> </th>
-<th style="background-color: lightBlue;"> <b> Naive Bayes</b> </th>
-</tr>
-
-<tr><th>Vanderbilt</th><th><b>Georgia W </b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (85.6%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
-<tr><th><b>Texas (W)</b></th><th>Texas Tech</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (59.3%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th><b>NC State (W)</b></th><th>Clemson</th><th>AWAY</th><th><b>HOME</b></th><th><b>HOME (70.4%)</b></th><th><b>HOME</b></th><th>AWAY</th></tr>
-<tr><th><b>Michigan (W)</b></th><th>Rutgers</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (65.5%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th>Stanford</th><th><b>UCLA (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (53.8%)</th><th><b>AWAY</b></th><th>HOME</th></tr>
-<tr><th><b>Oklahoma State (W)</b></th><th>Kansas State</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (53.2%)</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th><b>Michigan State (W)</b></th><th>Nebraska</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (74.3%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th><b>Oklahoma (W)</b></th><th>West Virginia</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (72.1%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th><b>Oregon (W)</b></th><th>Arizona</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (93.7%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th><b>Georgia Tech (W)</b></th><th>North Carolina</th><th>AWAY</th><th>AWAY</th><th>AWAY (70.0%)</th><th>AWAY</th><th>AWAY</th></tr>
-</table>
-
-<h2 style="text-align:center;font-size: 24px;"> Week 5 Selected Game Predictions</h2>
-
-<table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
-<tr>
-<th style="background-color: LightGreen;"> <b> HOME TEAM </b> </th>
-<th style="background-color: LightYellow;"> <b> AWAY TEAM</b> </th>
-<th style="background-color: lightBlue;"> <b> Random Forest </b> </th>
-<th style="background-color: lightBlue;"> <b> SVM </b> </th>
-<th style="background-color: lightBlue;"> <b> Neural Net </b> </th>
-<th style="background-color: lightBlue;"> <b> Decision Tree </b> </th>
-<th style="background-color: lightBlue;"> <b> Naive Bayes</b> </th>
-</tr>
-
-<tr><th>Maryland</th><th><b>Iowa (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (63.4%)</th><th><b>AWAY</b></th><th>HOME</th></tr>
-<tr><th>Utah State</th><th><b>BYU (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (65.9%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
-<tr><th><b>Kentucky (W)</b></th><th>Florida</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (60.3%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th>Texas A&M</th><th><b>Mississippi State (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (72.5%)</th><th>HOME</th><th>HOME</th></tr>
-<tr><th><b>North Carolina (W)</b></th><th>Duke</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (53.4%)</b></th><th><b>HOME</b></th><th>AWAY</th></tr>
-<tr><th><b>Georgia (W)</b></th><th>Arkansas</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (72.3%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th>Wisconsin</th><th><b>Michigan (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (81.8%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
-<tr><th><b>Wake Forest (W)</b></th><th>Louisville</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (73.2%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th>Colorado</th><th><b>USC (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (71.5%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
-<tr><th><b>Stanford (W)</b></th><th>Oregon</th><th>AWAY</th><th>AWAY</th><th>AWAY (68.9%)</th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th>Rutgers</th><th><b>Ohio State (W)</b></th><th>HOME</th><th><b>AWAY</b></th><th>HOME (51.1%)</th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
-<tr><th><b>Alabama (W)</b></th><th>Ole Miss</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (63.6%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
-<tr><th>Notre Dame</th><th><b>Cincinnati (W)</b></th><th>HOME</th><th><b>AWAY</b></th><th>HOME (52.4%)</th><th>HOME</th><th>HOME</th></tr>
-<tr><th>LSU</th><th><b>Auburn (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (52.7%)</th><th>HOME</th><th>HOME</th></tr>
-<tr><th>UCLA</th><th><b>Arizona State (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (66.1%)</th><th>HOME</th><th>HOME</th></tr>
-</table>
-
-<h2 style="text-align:center;font-size: 24px;"> Week 6 Selected Game Predictions</h2>
+<h2 style="text-align:center;font-size: 24px;"> Completed Week 6 Selected Game Predictions</h2>
 
 <table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
 <tr>
@@ -267,8 +179,7 @@ The code:
 <tr><th>Arizona</th><th><b>UCLA (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (82.1%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
 </table>
 
-
-<h2 style="text-align:center;font-size: 24px;"> Week 7 Selected Game Predictions</h2>
+<h2 style="text-align:center;font-size: 24px;"> Completed Week 5 Selected Game Predictions</h2>
 
 <table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
 <tr>
@@ -281,27 +192,150 @@ The code:
 <th style="background-color: lightBlue;"> <b> Naive Bayes</b> </th>
 </tr>
 
-<tr><th>Syracuse</th><th>Clemson</th><th>AWAY</th><th>AWAY</th><th>AWAY (56.0%)</th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th>Oregon</th><th>California</th><th>HOME</th><th>HOME</th><th>HOME (87.6%)</th><th>HOME</th><th>HOME</th></tr>
-<tr><th>San Jose State</th><th>San Diego State</th><th>AWAY</th><th>AWAY</th><th>AWAY(79.6%)</th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th>Texas</th><th>Oklahoma State</th><th>HOME</th><th>HOME</th><th>HOME (66.1%)</th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th>Cincinnati</th><th>UCF</th><th>HOME</th><th>HOME</th><th>HOME (84.6%)</th><th>HOME</th><th>HOME</th></tr>
-<tr><th>Indiana</th><th>Michigan State</th><th>AWAY</th><th>AWAY</th><th>AWAY (83.0%)</th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th>Arkansas</th><th>Auburn</th><th>HOME</th><th>HOME</th><th>HOME (56.6%)</th><th>HOME</th><th>HOME</th></tr>
-<tr><th>Iowa</th><th>Purdue</th><th>HOME</th><th>HOME</th><th>HOME (87.5%)</th><th>HOME</th><th>HOME</th></tr>
-<tr><th>Baylor</th><th>BYU</th><th>HOME</th><th>HOME</th><th>HOME (92.3%)</th><th>HOME</th><th>HOME</th></tr>
-<tr><th>Georgia</th><th>Kentucky</th><th>HOME</th><th>HOME</th><th>HOME (78.5%)</th><th>HOME</th><th>HOME</th></tr>
-<tr><th>UNC</th><th>Miami</th><th>HOME</th><th>HOME</th><th>HOME (72.8%)</th><th>HOME</th><th>HOME</th></tr>
-<tr><th>Mississippi State</th><th>Alabama</th><th>AWAY</th><th>AWAY</th><th>AWAY (71.4%)</th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th>Tennessee</th><th>Ole Miss</th><th>HOME</th><th>HOME</th><th>HOME (55.2%)</th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th>Boston College</th><th>NC State</th><th>HOME</th><th>HOME</th><th>HOME (62.7%)</th><th>HOME</th><th>HOME</th></tr>
-<tr><th>Oklahoma</th><th>TCU</th><th>HOME</th><th>HOME</th><th>HOME (83.0%)</th><th>HOME</th><th>HOME</th></tr>
-<tr><th>Utah</th><th>ASU</th><th>HOME</th><th>HOME</th><th>AWAY (57.9%)</th><th>AWAY</th><th>AWAY</th></tr>
-<tr><th>Washington</th><th>UCLA</th><th>AWAY</th><th>HOME</th><th>AWAY (64.3%)</th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th>Maryland</th><th><b>Iowa (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (63.4%)</th><th><b>AWAY</b></th><th>HOME</th></tr>
+<tr><th>Utah State</th><th><b>BYU (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (65.9%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th><b>Kentucky (W)</b></th><th>Florida</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (60.3%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th>Texas A&M</th><th><b>Mississippi State (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (72.5%)</th><th>HOME</th><th>HOME</th></tr>
+<tr><th><b>North Carolina (W)</b></th><th>Duke</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (53.4%)</b></th><th><b>HOME</b></th><th>AWAY</th></tr>
+<tr><th><b>Georgia (W)</b></th><th>Arkansas</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (72.3%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th>Wisconsin</th><th><b>Michigan (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (81.8%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th><b>Wake Forest (W)</b></th><th>Louisville</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (73.2%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th>Colorado</th><th><b>USC (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (71.5%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th><b>Stanford (W)</b></th><th>Oregon</th><th>AWAY</th><th>AWAY</th><th>AWAY (68.9%)</th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th>Rutgers</th><th><b>Ohio State (W)</b></th><th>HOME</th><th><b>AWAY</b></th><th>HOME (51.1%)</th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th><b>Alabama (W)</b></th><th>Ole Miss</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (63.6%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th>Notre Dame</th><th><b>Cincinnati (W)</b></th><th>HOME</th><th><b>AWAY</b></th><th>HOME (52.4%)</th><th>HOME</th><th>HOME</th></tr>
+<tr><th>LSU</th><th><b>Auburn (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (52.7%)</th><th>HOME</th><th>HOME</th></tr>
+<tr><th>UCLA</th><th><b>Arizona State (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (66.1%)</th><th>HOME</th><th>HOME</th></tr>
+</table>
+
+<h2 style="text-align:center;font-size: 24px;"> Completed Week 4 Selected Game Predictions</h2>
+
+<table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
+<tr>
+<th style="background-color: LightGreen;"> <b> HOME TEAM </b> </th>
+<th style="background-color: LightYellow;"> <b> AWAY TEAM</b> </th>
+<th style="background-color: lightBlue;"> <b> Random Forest </b> </th>
+<th style="background-color: lightBlue;"> <b> SVM </b> </th>
+<th style="background-color: lightBlue;"> <b> Neural Net </b> </th>
+<th style="background-color: lightBlue;"> <b> Decision Tree </b> </th>
+<th style="background-color: lightBlue;"> <b> Naive Bayes</b> </th>
+</tr>
+
+<tr><th>Vanderbilt</th><th><b>Georgia W </b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (85.6%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th><b>Texas (W)</b></th><th>Texas Tech</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (59.3%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>NC State (W)</b></th><th>Clemson</th><th>AWAY</th><th><b>HOME</b></th><th><b>HOME (70.4%)</b></th><th><b>HOME</b></th><th>AWAY</th></tr>
+<tr><th><b>Michigan (W)</b></th><th>Rutgers</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (65.5%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th>Stanford</th><th><b>UCLA (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (53.8%)</th><th><b>AWAY</b></th><th>HOME</th></tr>
+<tr><th><b>Oklahoma State (W)</b></th><th>Kansas State</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (53.2%)</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>Michigan State (W)</b></th><th>Nebraska</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (74.3%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>Oklahoma (W)</b></th><th>West Virginia</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (72.1%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>Oregon (W)</b></th><th>Arizona</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (93.7%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>Georgia Tech (W)</b></th><th>North Carolina</th><th>AWAY</th><th>AWAY</th><th>AWAY (70.0%)</th><th>AWAY</th><th>AWAY</th></tr>
+</table>
+
+<h2 style="text-align:center;font-size: 24px;"> Completed Week 3 Selected Game Predictions</h2>
+
+<table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
+<tr>
+<th style="background-color: LightGreen;"> <b> HOME TEAM </b> </th>
+<th style="background-color: LightYellow;"> <b> AWAY TEAM</b> </th>
+<th style="background-color: lightBlue;"> <b> Random Forest </b> </th>
+<th style="background-color: lightBlue;"> <b> SVM </b> </th>
+<th style="background-color: lightBlue;"> <b> Neural Net </b> </th>
+<th style="background-color: lightBlue;"> <b> Decision Tree </b> </th>
+<th style="background-color: lightBlue;"> <b> Naive Bayes</b> </th>
+</tr>
+
+<tr><th>Florida</th><th><b>Alabama (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th>HOME (57.7%)</th><th>HOME</th><th><b>AWAY</b></th></tr>
+<tr><th><b>West Virginia (W)</b></th><th>Virginia Tech</th><th>AWAY</th><th>AWAY</th><th>AWAY (76.5%)</th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th>Indiana</th><th><b>Cincinnati (W)</b></th><th>HOME</th><th><b>AWAY</b></th><th>HOME (55.9%)</th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th><b>Oklahoma (W)</b></th><th>Nebraska</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (77.1%)</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>Notre Dame (W)</b></th><th>Purdue</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (53.2%)</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>Clemson (W)</b></th><th>Georgia Tech</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (82.3%)</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th>Washington State</th><th><b>USC (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (52.5%)</b></th><th>HOME</th><th><b>AWAY</b></th></tr>
+<tr><th><b>North Carolina (W)</b></th><th>Virginia</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (59.8%)</b></th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th><b>Penn State (W)</b></th><th>Auburn</th><th>AWAY</th><th>AWAY</th><th><b>HOME (62.4%)</b></th><th>AWAY</th><th><b>HOME</b></th></tr>
+<tr><th><b>Ole Miss (W)</b></th><th>Tulane</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (84.5%)</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>BYU (W) </b></th><th>ASU</th><th>AWAY</th><th>AWAY</th><th><b>HOME (59.6%)</b></th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th>UCLA</th><th><b>Fresno State (W)</b></th><th>HOME</th><th>HOME</th><th><b>AWAY (74.2%)</b></th><th>HOME</th><th>HOME</th></tr>
+</table>
+
+<h2 style="text-align:center;font-size: 24px;"> Completed Week 2 Selected Game Predictions</h2>
+
+<table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
+<tr>
+<th style="background-color: LightGreen;"> <b> HOME TEAM </b> </th>
+<th style="background-color: LightYellow;"> <b> AWAY TEAM</b> </th>
+<th style="background-color: lightBlue;"> <b> Random Forest </b> </th>
+<th style="background-color: lightBlue;"> <b> SVM </b> </th>
+<th style="background-color: lightBlue;"> <b> Neural Net </b> </th>
+<th style="background-color: lightBlue;"> <b> Decision Tree </b> </th>
+<th style="background-color: lightBlue;"> <b> Naive Bayes</b> </th>
+</tr>
+
+<tr><th><b>Coastal Carolina (W)</b></th><th>Kansas</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (50.2%)</th><th><b>HOME</b></th><th>AWAY</th></tr>
+<tr><th><b>Oklahoma State (W)</b></th><th>Tulsa</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (88.2%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th>Ohio State</th><th><b>Oregon (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (76.9%)</th><th>HOME</th><th>HOME</th></tr>
+<tr><th>Navy</th><th><b>Air Force (W)</b></th><th><b>AWAY</b></th><th>HOME</th><th><b>AWAY (84.9%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th>Iowa State</th><th><b>Iowa (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th>HOME (72.4%)</th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th>Rice</th><th><b>Houston (W)</b></th><th>HOME</th><th>HOME</th><th><b>AWAY (73.7%)</b></th><th>HOME</th><th>HOME</th></tr>
+<tr><th><b>Arkansas (W)</b></th><th>Texas</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (74.0%)</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>BYU (W)</b></th><th>Utah</th><th>AWAY</th><th>AWAY</th><th><b>HOME (72.3%)</b></th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th>USC</th><th><b>Stanford (W)</b></th><th>HOME</th><th>HOME</th><th><b>AWAY (89%)</b></th><th>HOME</th><th>HOME</th></tr>
+<tr><th><b>ASU (W)</b></th><th>UNLV</th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY (88%)</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+</table>
+
+<h2 style="text-align:center;font-size: 24px;"> Completed Week 1 Selected Game Predictions</h2>
+
+<table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
+<tr>
+<th style="background-color: LightGreen;"> <b> HOME TEAM </b> </th>
+<th style="background-color: LightYellow;"> <b> AWAY TEAM</b> </th>
+<th style="background-color: lightBlue;"> <b> Random Forest </b> </th>
+<th style="background-color: lightBlue;"> <b> SVM </b> </th>
+<th style="background-color: lightBlue;"> <b> Neural Net </b> </th>
+<th style="background-color: lightBlue;"> <b> Decision Tree </b> </th>
+<th style="background-color: lightBlue;"> <b> Naive Bayes</b> </th>
+<th style="background-color: lightBlue;"> <b> k-NN  </b> </th>
+</tr>
+<tr><th>Minnesota</th><th><b> Ohio State (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (93%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th><b>Virginia Tech (W)</b></th><th>North Carolina</th><th>AWAY</th><th>AWAY</th><th>AWAY (93%)</th><th>AWAY</th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th><b>UCF (W)</b></th><th>Boise State</th><th><b>HOME</b></th><th>AWAY</th><th><b>HOME (60%)</b></th><th><b>HOME</b></th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th>Northwestern</th><th><b>Michigan State (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (92%)</th><th>HOME</th><th>HOME</th><th>HOME</th></tr>
+<tr><th>Wisconsin</th><th><b>Penn State (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (92%)</th><th><b>AWAY</b></th><th>HOME</th><th>HOME</th></tr>
+<tr><th>Tulane</th><th><b>Oklahoma (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th>HOME (53%)</th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+<tr><th><b>Oregon (W)</b></th><th>Fresno State</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (93%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>Iowa (W)</b></th><th>Indiana</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (60%)</b></th><th>AWAY</th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>Cincinnati (W)</b></th><th>Miami(OH)</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (93%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>Texas (W)</b></th><th>Louisiana</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (62%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>USC (W)</b></th><th>San Jose State</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (93%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th><b>UCLA (W)</b></th><th>LSU</th><th>AWAY</th><th><b>HOME</b></th><th>AWAY (93%)</th><th>AWAY</th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th>Florida State</th><th><b>Notre Dame (W)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY (76%)</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th><th><b>AWAY</b></th></tr>
+</table>
+
+<h2 style="text-align:center;font-size: 24px;"> Completed Week 0 Selected Game Results vs. Predictions</h2>
+
+<table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
+<tr>
+<th style="background-color: LightGreen;"> <b> HOME TEAM </b> </th>
+<th style="background-color: LightYellow;"> <b> AWAY TEAM </b> </th>
+<th style="background-color: lightBlue;"> <b> Random Forest </b> </th>
+<th style="background-color: lightBlue;"> <b> SVM </b> </th>
+<th style="background-color: lightBlue;"> <b> Neural Net </b> </th>
+<th style="background-color: lightBlue;"> <b> Decision Tree </b> </th>
+<th style="background-color: lightBlue;"> <b> Naive Bayes</b> </th>
+<th style="background-color: lightBlue;"> <b> k-NN  </b> </th>
+</tr>
+<tr><th><b>Illinois (W)</b></th><th>Nebraska</th><th>AWAY</th><th>AWAY</th><th>AWAY (93%)</th><th>AWAY</th><th>AWAY</th><th>AWAY</th></tr>
+<tr><th><b>Fresno State (W)</b></th><th>UConn</th><th><b>HOME</b></th><th>AWAY</th><th><b>HOME (65%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th><th>AWAY</th></tr>
+<tr><th><b>UCLA (W)</b></th><th>Hawaii</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (62%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
+<tr><th>New Mexico State</th><th><b>UTEP (W)</b></th><th>HOME</th><th>HOME</th><th>HOME (92%)</th><th><b>AWAY</b></th><th>HOME</th><th><b>AWAY</b></th></tr>
+<tr><th><b>San Jose State (W)</b></th><th>Southern Utah</th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME (93%)</b></th><th><b>HOME</b></th><th><b>HOME</b></th><th><b>HOME</b></th></tr>
 </table>
 
 <hr style="height:2px;background: black;">
-<h2 style="text-align:center;font-size: 24px;"> <a name="Current_Rankings"> </a> Post Week 6 College Team Rankings </h2>
+<h2 style="text-align:center;font-size: 32px;"> <a name="Current_Rankings"> </a> Current (Week 7) Team Rankings vs. Rating Systems </h2>
 <p style = "text-align:center; margin-left: 50px;margin-right:50px"> Return to <a href="#Top_of_page"> Top</a></p>
 
 <table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
@@ -313,56 +347,145 @@ The code:
 <th style="background-color: LightYellow"> <b>PageRank</b></th> <th style="background-color: LightYellow"><b>Score</b></th>
 <th style="background-color: LightSalmon"> <b>HITS</b></th> <th style="background-color: LightSalmon"><b>Score</b></th></tr>
 
-<tr><td>1</td><td>Georgia</td><td>1762.2</td><td>Georgia</td><td>2038.2</td><td>171.0</td><td>Oklahoma</td><td>173</td><td>Boise State</td><td>105.34</td><td>Coastal Carolina</td><td>149.95</td></tr>
-<tr><td>2</td><td>Iowa</td><td>1761.7</td><td>Iowa</td><td>2024.4</td><td>171.1</td><td>Oklahoma State</td><td>168</td><td>Oklahoma State</td><td>85.84</td><td>Wake Forest</td><td>149.95</td></tr>
-<tr><td>3</td><td>Oklahoma</td><td>1755.1</td><td>Oklahoma</td><td>2004.8</td><td>166.7</td><td>Kansas State</td><td>160</td><td>BYU</td><td>75.87</td><td>Michigan State</td><td>149.95</td></tr>
-<tr><td>4</td><td>Kentucky</td><td>1739.7</td><td>Oklahoma State</td><td>1990.0</td><td>179.8</td><td>Nevada</td><td>157</td><td>Georgia</td><td>69.9</td><td>Michigan</td><td>149.95</td></tr>
-<tr><td>5</td><td>Michigan</td><td>1728.2</td><td>UT San Antonio</td><td>1988.3</td><td>193.5</td><td>Boise State</td><td>154</td><td>Texas A&M</td><td>69.44</td><td>Kentucky</td><td>149.95</td></tr>
-<tr><td>6</td><td>Oklahoma State</td><td>1727.2</td><td>Kentucky</td><td>1985.5</td><td>174.8</td><td>BYU</td><td>150</td><td>Alabama</td><td>65.11</td><td>Oklahoma</td><td>149.95</td></tr>
-<tr><td>7</td><td>Cincinnati</td><td>1721.7</td><td>Cincinnati</td><td>1974.0</td><td>186.6</td><td>Arizona State</td><td>132</td><td>Iowa</td><td>62.14</td><td>Iowa</td><td>149.95</td></tr>
-<tr><td>8</td><td>Wake Forest</td><td>1720.1</td><td>Michigan</td><td>1960.8</td><td>178.3</td><td>Iowa</td><td>132</td><td>Mississippi State</td><td>61.67</td><td>SMU</td><td>149.95</td></tr>
-<tr><td>9</td><td>SMU</td><td>1719.8</td><td>SMU</td><td>1946.7</td><td>187.8</td><td>Cincinnati</td><td>132</td><td>Oklahoma</td><td>61.15</td><td>Georgia</td><td>149.95</td></tr>
-<tr><td>10</td><td>UT San Antonio</td><td>1717.0</td><td>Michigan State</td><td>1940.7</td><td>179.3</td><td>UCLA</td><td>130</td><td>Kansas State</td><td>60.04</td><td>UT San Antonio</td><td>149.95</td></tr>
-<tr><td>11</td><td>Michigan State</td><td>1716.9</td><td>Wake Forest</td><td>1932.4</td><td>177.6</td><td>Michigan</td><td>127</td><td>Arkansas</td><td>58.31</td><td>Cincinnati</td><td>124.96</td></tr>
-<tr><td>12</td><td>Coastal Carolina</td><td>1702.1</td><td>Coastal Carolina</td><td>1922.0</td><td>192.7</td><td>Stanford</td><td>126</td><td>Stanford</td><td>55.41</td><td>Oklahoma State</td><td>124.96</td></tr>
-<tr><td>13</td><td>Air Force</td><td>1678.5</td><td>Notre Dame</td><td>1889.9</td><td>167.9</td><td>Oregon</td><td>124</td><td>Utah State</td><td>55.27</td><td>San Diego State</td><td>124.96</td></tr>
-<tr><td>14</td><td>San Diego State</td><td>1675.6</td><td>Penn State</td><td>1886.2</td><td>174.6</td><td>Penn State</td><td>123</td><td>Oregon</td><td>50.36</td><td>Liberty</td><td>103.04</td></tr>
-<tr><td>15</td><td>Ohio State</td><td>1675.5</td><td>Air Force</td><td>1864.1</td><td>167.4</td><td>Ohio State</td><td>120</td><td>Michigan</td><td>49.21</td><td>UTEP</td><td>103.04</td></tr>
-<tr><td>16</td><td>Arizona State</td><td>1667.4</td><td>Ole Miss</td><td>1855.8</td><td>182.0</td><td>Georgia</td><td>119</td><td>Cincinnati</td><td>47.54</td><td>BYU</td><td>103.04</td></tr>
-<tr><td>17</td><td>Notre Dame</td><td>1666.1</td><td>San Diego State</td><td>1852.9</td><td>192.6</td><td>Michigan State</td><td>116</td><td>Air Force</td><td>47.02</td><td>Air Force</td><td>103.04</td></tr>
-<tr><td>18</td><td>Penn State</td><td>1658.5</td><td>Alabama</td><td>1851.4</td><td>172.6</td><td>UT San Antonio</td><td>114</td><td>Texas</td><td>44.58</td><td>Alabama</td><td>95.73</td></tr>
-<tr><td>19</td><td>Liberty</td><td>1656.5</td><td>Baylor</td><td>1849.4</td><td>171.4</td><td>Clemson</td><td>113</td><td>Ole Miss</td><td>44.14</td><td>Houston</td><td>95.73</td></tr>
-<tr><td>20</td><td>Baylor</td><td>1649.7</td><td>Ohio State</td><td>1849.0</td><td>167.0</td><td>Kentucky</td><td>112</td><td>Wake Forest</td><td>43.7</td><td>Ohio State</td><td>95.73</td></tr>
-<tr><td>21</td><td>Ole Miss</td><td>1642.9</td><td>BYU</td><td>1848.2</td><td>172.4</td><td>Boston College</td><td>111</td><td>Kentucky</td><td>41.93</td><td>Baylor</td><td>88.42</td></tr>
-<tr><td>22</td><td>NC State</td><td>1639.2</td><td>Liberty</td><td>1840.5</td><td>167.8</td><td>Auburn</td><td>109</td><td>Arizona State</td><td>41.86</td><td>Arizona State</td><td>88.42</td></tr>
-<tr><td>23</td><td>Alabama</td><td>1638.4</td><td>Arizona State</td><td>1838.3</td><td>163.6</td><td>Rutgers</td><td>100</td><td>Nevada</td><td>41.6</td><td>Notre Dame</td><td>88.42</td></tr>
-<tr><td>24</td><td>BYU</td><td>1632.7</td><td>Texas A&M</td><td>1815.3</td><td>164.1</td><td>Notre Dame</td><td>100</td><td>UCF</td><td>40.94</td><td>Appalachian State</td><td>85.35</td></tr>
-<tr><td>25</td><td>Louisiana</td><td>1631.2</td><td>Arkansas</td><td>1804.7</td><td>163.5</td><td>LSU</td><td>97</td><td>LSU</td><td>38.64</td><td>Penn State</td><td>81.11</td></tr>
-<tr><td>26</td><td>Houston</td><td>1628.3</td><td>NC State</td><td>1789.1</td><td>180.4</td><td>Temple</td><td>93</td><td>UCLA</td><td>38.09</td><td>Boston College</td><td>78.05</td></tr>
-<tr><td>27</td><td>UTEP</td><td>1625.4</td><td>Nevada</td><td>1785.2</td><td>189.9</td><td>Utah State</td><td>92</td><td>Penn State</td><td>37.6</td><td>Army</td><td>78.05</td></tr>
-<tr><td>28</td><td>Pittsburgh</td><td>1623.1</td><td>Auburn</td><td>1778.8</td><td>168.4</td><td>Memphis</td><td>90</td><td>Western Michigan</td><td>36.68</td><td>Oregon</td><td>78.05</td></tr>
-<tr><td>29</td><td>Northern Illinois</td><td>1617.0</td><td>Boise State</td><td>1776.1</td><td>175.8</td><td>Mississippi State</td><td>82</td><td>Ball State</td><td>36.33</td><td>Nevada</td><td>78.05</td></tr>
-<tr><td>30</td><td>Appalachian State</td><td>1614.9</td><td>Pittsburgh</td><td>1773.9</td><td>182.0</td><td>Air Force</td><td>80</td><td>Memphis</td><td>34.84</td><td>NC State</td><td>78.05</td></tr>
-<tr><td>31</td><td>Nevada</td><td>1613.4</td><td>Wyoming</td><td>1772.5</td><td>189.4</td><td>Texas A&M</td><td>77</td><td>Notre Dame</td><td>34.45</td><td>Louisiana</td><td>70.74</td></tr>
-<tr><td>32</td><td>Texas A&M</td><td>1606.0</td><td>Texas</td><td>1772.3</td><td>169.7</td><td>East Tennessee State</td><td>75</td><td>Ohio State</td><td>33.09</td><td>Charlotte</td><td>70.74</td></tr>
-<tr><td>33</td><td>Texas</td><td>1601.6</td><td>Oregon</td><td>1763.8</td><td>198.6</td><td>South Dakota State</td><td>74</td><td>Syracuse</td><td>32.56</td><td>Pittsburgh</td><td>70.74</td></tr>
-<tr><td>34</td><td>Auburn</td><td>1600.1</td><td>UTEP</td><td>1761.0</td><td>178.5</td><td>Wyoming</td><td>73</td><td>Wyoming</td><td>32.13</td><td>Wyoming</td><td>63.43</td></tr>
-<tr><td>35</td><td>Tennessee</td><td>1600.0</td><td>Boston College</td><td>1741.7</td><td>184.7</td><td>Alabama</td><td>69</td><td>Michigan State</td><td>31.34</td><td>Ole Miss</td><td>63.43</td></tr>
-<tr><td>36</td><td>Wyoming</td><td>1598.5</td><td>Louisiana</td><td>1740.2</td><td>181.2</td><td>Northern Illinois</td><td>69</td><td>SMU</td><td>31.25</td><td>Eastern Michigan</td><td>56.12</td></tr>
-<tr><td>37</td><td>Virginia</td><td>1596.8</td><td>Mississippi State</td><td>1737.0</td><td>175.7</td><td>Wake Forest</td><td>61</td><td>Louisville</td><td>30.77</td><td>Oregon State</td><td>56.12</td></tr>
-<tr><td>38</td><td>Boston College</td><td>1592.2</td><td>Western Michigan</td><td>1736.2</td><td>169.6</td><td>Virginia</td><td>58</td><td>Clemson</td><td>29.8</td><td>Texas A&M</td><td>48.81</td></tr>
-<tr><td>39</td><td>Oregon</td><td>1588.7</td><td>Kansas State</td><td>1734.0</td><td>179.6</td><td>Florida</td><td>50</td><td>Texas Tech</td><td>29.2</td><td>Fresno State</td><td>48.81</td></tr>
-<tr><td>40</td><td>Florida</td><td>1588.6</td><td>Florida</td><td>1731.9</td><td>169.7</td><td>Vanderbilt</td><td>43</td><td>Virginia</td><td>27.98</td><td>Texas Tech</td><td>48.81</td></tr>
-<tr><td>41</td><td>UAB</td><td>1586.7</td><td>Northern Illinois</td><td>1731.4</td><td>167.4</td><td>Colorado State</td><td>40</td><td>Miami</td><td>27.1</td><td>UCF</td><td>45.75</td></tr>
-<tr><td>42</td><td>Western Michigan</td><td>1579.1</td><td>Virginia</td><td>1729.8</td><td>162.0</td><td>Texas</td><td>39</td><td>NC State</td><td>27.03</td><td>Tennessee</td><td>41.5</td></tr>
-<tr><td>43</td><td>Clemson</td><td>1577.3</td><td>Appalachian State</td><td>1725.9</td><td>182.9</td><td>SMU</td><td>39</td><td>Northern Illinois</td><td>26.88</td><td>Western Michigan</td><td>34.2</td></tr>
-<tr><td>44</td><td>Arkansas</td><td>1577.2</td><td>Tennessee</td><td>1725.4</td><td>162.9</td><td>Minnesota</td><td>37</td><td>UT San Antonio</td><td>26.82</td><td>Virginia</td><td>34.2</td></tr>
-<tr><td>45</td><td>Boise State</td><td>1576.7</td><td>UAB</td><td>1719.8</td><td>162.1</td><td>Wisconsin</td><td>34</td><td>Fresno State</td><td>26.52</td><td>UCLA</td><td>34.2</td></tr>
-<tr><td>46</td><td>Army</td><td>1569.0</td><td>Maryland</td><td>1718.1</td><td>171.2</td><td>Toledo</td><td>33</td><td>Auburn</td><td>25.78</td><td>South Alabama</td><td>31.13</td></tr>
-<tr><td>47</td><td>TCU</td><td>1566.3</td><td>TCU</td><td>1710.4</td><td>181.5</td><td>Ball State</td><td>30</td><td>Liberty</td><td>25.26</td><td>Mississippi State</td><td>31.13</td></tr>
-<tr><td>48</td><td>Mississippi State</td><td>1564.9</td><td>Incarnate Word</td><td>1708.8</td><td>278.0</td><td>Purdue</td><td>30</td><td>Pittsburgh</td><td>24.9</td><td>Texas</td><td>26.89</td></tr>
-<tr><td>49</td><td>Oregon State</td><td>1563.6</td><td>Houston</td><td>1700.5</td><td>174.6</td><td>TCU</td><td>28</td><td>TCU</td><td>24.61</td><td>Arkansas</td><td>26.89</td></tr>
-<tr><td>50</td><td>UCLA</td><td>1563.3</td><td>Clemson</td><td>1700.1</td><td>182.8</td><td>Baylor</td><td>25</td><td>North Carolina</td><td>24.28</td><td>Northern Illinois</td><td>26.89</td></tr>
+<tr><td>1</td><td>Georgia</td><td>1808.97</td><td>Georgia</td><td>2092.5</td><td>157.5</td><td>Oklahoma State</td><td>152</td><td>Oklahoma State</td><td>103.8</td><td>Michigan State</td><td>155.8</td></tr>
+<tr><td>2</td><td>Oklahoma</td><td>1780.33</td><td>Oklahoma</td><td>2028.3</td><td>158.8</td><td>Cincinnati</td><td>143</td><td>Georgia</td><td>103.5</td><td>Oklahoma</td><td>155.8</td></tr>
+<tr><td>3</td><td>Oklahoma State</td><td>1759.83</td><td>Oklahoma State</td><td>2025.5</td><td>167.6</td><td>Baylor</td><td>140</td><td>Purdue</td><td>81.3</td><td>Georgia</td><td>155.8</td></tr>
+<tr><td>4</td><td>Cincinnati</td><td>1745.79</td><td>UT San Antonio</td><td>2000.0</td><td>188.4</td><td>Notre Dame</td><td>140</td><td>Texas A&M</td><td>79.4</td><td>UT San Antonio</td><td>155.8</td></tr>
+<tr><td>5</td><td>Michigan State</td><td>1738.69</td><td>Cincinnati</td><td>1995.4</td><td>178.1</td><td>Purdue</td><td>137</td><td>Cincinnati</td><td>76.1</td><td>Michigan</td><td>133.5</td></tr>
+<tr><td>6</td><td>UT San Antonio</td><td>1737.11</td><td>Michigan</td><td>1960.8</td><td>178.3</td><td>Iowa</td><td>133</td><td>Iowa</td><td>73.6</td><td>Cincinnati</td><td>133.5</td></tr>
+<tr><td>7</td><td>Michigan</td><td>1728.19</td><td>Michigan State</td><td>1960.6</td><td>171.9</td><td>BYU</td><td>131</td><td>Alabama</td><td>73.5</td><td>SMU</td><td>133.5</td></tr>
+<tr><td>8</td><td>Wake Forest</td><td>1720.07</td><td>SMU</td><td>1946.7</td><td>187.8</td><td>Michigan</td><td>115</td><td>Boise State</td><td>71.8</td><td>Oklahoma State</td><td>133.5</td></tr>
+<tr><td>9</td><td>SMU</td><td>1719.84</td><td>Kentucky</td><td>1937.0</td><td>160.6</td><td>Utah State</td><td>114</td><td>Mississippi State</td><td>69.9</td><td>Coastal Carolina</td><td>133.5</td></tr>
+<tr><td>10</td><td>Air Force</td><td>1714.21</td><td>Wake Forest</td><td>1932.4</td><td>177.6</td><td>San Diego State</td><td>114</td><td>Stanford</td><td>69.9</td><td>Wake Forest</td><td>133.5</td></tr>
+<tr><td>11</td><td>Coastal Carolina</td><td>1702.1</td><td>Coastal Carolina</td><td>1922.0</td><td>192.7</td><td>Oklahoma</td><td>111</td><td>BYU</td><td>67.9</td><td>San Diego State</td><td>133.5</td></tr>
+<tr><td>12</td><td>San Diego State</td><td>1698.36</td><td>Iowa</td><td>1917.3</td><td>162.3</td><td>Utah</td><td>108</td><td>Oregon</td><td>66.7</td><td>UTEP</td><td>116.2</td></tr>
+<tr><td>13</td><td>Baylor</td><td>1697.24</td><td>Baylor</td><td>1911.8</td><td>157.5</td><td>Georgia</td><td>108</td><td>Notre Dame</td><td>59.4</td><td>Iowa</td><td>110.4</td></tr>
+<tr><td>14</td><td>Kentucky</td><td>1692.93</td><td>Air Force</td><td>1911.4</td><td>155.1</td><td>Penn State</td><td>107</td><td>Utah State</td><td>58.7</td><td>Air Force</td><td>110.4</td></tr>
+<tr><td>15</td><td>Ole Miss</td><td>1686.75</td><td>Ole Miss</td><td>1904.0</td><td>166.8</td><td>Arizona State</td><td>102</td><td>Arkansas</td><td>56.7</td><td>Alabama</td><td>104.6</td></tr>
+<tr><td>16</td><td>NC State</td><td>1682.48</td><td>Alabama</td><td>1897.5</td><td>159.6</td><td>UCLA</td><td>99</td><td>Baylor</td><td>54.0</td><td>Baylor</td><td>98.8</td></tr>
+<tr><td>17</td><td>Iowa</td><td>1680.38</td><td>Notre Dame</td><td>1889.9</td><td>167.9</td><td>Iowa State</td><td>96</td><td>Kansas State</td><td>52.0</td><td>Oregon</td><td>93.9</td></tr>
+<tr><td>18</td><td>Louisiana</td><td>1678.87</td><td>Penn State</td><td>1886.2</td><td>174.6</td><td>Western Michigan</td><td>95</td><td>Oklahoma</td><td>51.5</td><td>NC State</td><td>93.9</td></tr>
+<tr><td>19</td><td>Alabama</td><td>1677.94</td><td>San Diego State</td><td>1880.2</td><td>181.3</td><td>Auburn</td><td>93</td><td>Michigan</td><td>49.3</td><td>Nevada</td><td>93.9</td></tr>
+<tr><td>20</td><td>Ohio State</td><td>1675.5</td><td>Ohio State</td><td>1849.0</td><td>167.0</td><td>Pittsburgh</td><td>92</td><td>Texas</td><td>48.5</td><td>Kentucky</td><td>93</td></tr>
+<tr><td>21</td><td>Notre Dame</td><td>1666.13</td><td>NC State</td><td>1848.8</td><td>165.0</td><td>Washington State</td><td>90</td><td>Minnesota</td><td>47.2</td><td>Louisiana</td><td>88.1</td></tr>
+<tr><td>22</td><td>Pittsburgh</td><td>1660.95</td><td>Auburn</td><td>1844.2</td><td>155.0</td><td>Kansas State</td><td>89</td><td>Penn State</td><td>46.2</td><td>Houston</td><td>82.4</td></tr>
+<tr><td>23</td><td>Penn State</td><td>1658.46</td><td>Texas A&M</td><td>1843.3</td><td>155.1</td><td>Wake Forest</td><td>85</td><td>Air Force</td><td>45.8</td><td>Pittsburgh</td><td>82.4</td></tr>
+<tr><td>24</td><td>UTEP</td><td>1655.47</td><td>Nevada</td><td>1825.1</td><td>175.3</td><td>Virginia</td><td>83</td><td>Ohio State</td><td>42.8</td><td>Ohio State</td><td>82.4</td></tr>
+<tr><td>25</td><td>Nevada</td><td>1651.85</td><td>Pittsburgh</td><td>1824.6</td><td>167.1</td><td>Air Force</td><td>83</td><td>Auburn</td><td>42.8</td><td>Penn State</td><td>76.6</td></tr>
+<tr><td>26</td><td>Auburn</td><td>1646.77</td><td>Louisiana</td><td>1805.8</td><td>165.4</td><td>Kentucky</td><td>82</td><td>Fresno State</td><td>42.3</td><td>Liberty</td><td>76.6</td></tr>
+<tr><td>27</td><td>Texas A&M</td><td>1641.29</td><td>UTEP</td><td>1795.3</td><td>167.0</td><td>Wisconsin</td><td>80</td><td>Western Michigan</td><td>42.0</td><td>Notre Dame</td><td>76.6</td></tr>
+<tr><td>28</td><td>Northern Illinois</td><td>1639.67</td><td>BYU</td><td>1794.2</td><td>158.2</td><td>Michigan State</td><td>80</td><td>Arizona State</td><td>41.4</td><td>Ole Miss</td><td>76.6</td></tr>
+<tr><td>29</td><td>Virginia</td><td>1629.74</td><td>Western Michigan</td><td>1783.7</td><td>156.9</td><td>Clemson</td><td>79</td><td>Kentucky</td><td>41.2</td><td>Texas Tech</td><td>70.8</td></tr>
+<tr><td>30</td><td>Houston</td><td>1628.27</td><td>Oregon</td><td>1782.0</td><td>190.6</td><td>Wyoming</td><td>79</td><td>Utah</td><td>41.1</td><td>Texas A&M</td><td>70.8</td></tr>
+<tr><td>31</td><td>Utah</td><td>1627.3</td><td>Arizona State</td><td>1768.1</td><td>151.6</td><td>Stanford</td><td>76</td><td>Ole Miss</td><td>39.2</td><td>Charlotte</td><td>65.9</td></tr>
+<tr><td>32</td><td>Western Michigan</td><td>1624.84</td><td>Virginia</td><td>1764.1</td><td>151.9</td><td>Army</td><td>75</td><td>UCLA</td><td>39.1</td><td>Fresno State</td><td>65</td></tr>
+<tr><td>33</td><td>Clemson</td><td>1616.65</td><td>Utah</td><td>1761.3</td><td>162.7</td><td>Northern Illinois</td><td>75</td><td>LSU</td><td>38.6</td><td>Arizona State</td><td>59.2</td></tr>
+<tr><td>34</td><td>Oregon</td><td>1611.08</td><td>Clemson</td><td>1754.6</td><td>167.2</td><td>Ole Miss</td><td>70</td><td>Ball State</td><td>38.6</td><td>BYU</td><td>59.2</td></tr>
+<tr><td>35</td><td>Ball State</td><td>1610.66</td><td>Northern Illinois</td><td>1753.3</td><td>159.8</td><td>Georgia State</td><td>68</td><td>Wyoming</td><td>33.7</td><td>UCLA</td><td>53.4</td></tr>
+<tr><td>36</td><td>UAB</td><td>1607.9</td><td>Arkansas</td><td>1751.8</td><td>151.0</td><td>Oregon</td><td>67</td><td>Wake Forest</td><td>33.2</td><td>Western Michigan</td><td>53.4</td></tr>
+<tr><td>37</td><td>Fresno State</td><td>1607.36</td><td>Liberty</td><td>1750.5</td><td>157.1</td><td>Georgia Tech</td><td>65</td><td>San Diego State</td><td>32.7</td><td>Northern Illinois</td><td>53.4</td></tr>
+<tr><td>38</td><td>Arizona State</td><td>1602.73</td><td>Ball State</td><td>1747.0</td><td>160.5</td><td>Charlotte</td><td>64</td><td>Nevada</td><td>32.4</td><td>Virginia</td><td>53.4</td></tr>
+<tr><td>39</td><td>UCLA</td><td>1602.38</td><td>Texas</td><td>1744.1</td><td>160.2</td><td>Ohio State</td><td>61</td><td>NC State</td><td>31.9</td><td>Army</td><td>48.5</td></tr>
+<tr><td>40</td><td>Minnesota</td><td>1593.75</td><td>Purdue</td><td>1739.4</td><td>174.9</td><td>LSU</td><td>58</td><td>Washington State</td><td>31.8</td><td>Appalachian State</td><td>48.5</td></tr>
+<tr><td>41</td><td>Iowa State</td><td>1591.97</td><td>Fresno State</td><td>1737.8</td><td>164.6</td><td>UT San Antonio</td><td>56</td><td>Memphis</td><td>30.7</td><td>South Alabama</td><td>48.5</td></tr>
+<tr><td>42</td><td>Purdue</td><td>1587.75</td><td>LSU</td><td>1737.5</td><td>154.5</td><td>Duke</td><td>49</td><td>Northern Illinois</td><td>28.1</td><td>Minnesota</td><td>48.5</td></tr>
+<tr><td>43</td><td>LSU</td><td>1586.26</td><td>UAB</td><td>1735.3</td><td>156.9</td><td>Coastal Carolina</td><td>45</td><td>Pittsburgh</td><td>28.0</td><td>Oregon State</td><td>42.8</td></tr>
+<tr><td>44</td><td>BYU</td><td>1585.15</td><td>Boise State</td><td>1731.1</td><td>161.9</td><td>Northwestern</td><td>43</td><td>Texas Tech</td><td>27.8</td><td>North Carolina</td><td>42.8</td></tr>
+<tr><td>45</td><td>Liberty</td><td>1580.83</td><td>UCLA</td><td>1727.6</td><td>157.8</td><td>Boston College</td><td>43</td><td>Michigan State</td><td>27.5</td><td>Utah State</td><td>42.8</td></tr>
+<tr><td>46</td><td>Washington State</td><td>1579.05</td><td>Iowa State</td><td>1722.3</td><td>167.7</td><td>Texas</td><td>43</td><td>UT San Antonio</td><td>27.4</td><td>Auburn</td><td>41.9</td></tr>
+<tr><td>47</td><td>Texas Tech</td><td>1572.95</td><td>Maryland</td><td>1718.1</td><td>171.2</td><td>Florida</td><td>42</td><td>Bowling Green</td><td>27.1</td><td>UAB</td><td>41.9</td></tr>
+<tr><td>48</td><td>Texas</td><td>1568.9</td><td>Texas Tech</td><td>1712.7</td><td>157.6</td><td>SMU</td><td>41</td><td>North Carolina</td><td>26.7</td><td>Boston College</td><td>37</td></tr>
+<tr><td>49</td><td>Appalachian State</td><td>1567.2</td><td>Incarnate Word</td><td>1708.8</td><td>278.0</td><td>Louisville</td><td>37</td><td>UCF</td><td>26.4</td><td>Marshall</td><td>37</td></tr>
+<tr><td>50</td><td>Wisconsin</td><td>1566.43</td><td>Utah State</td><td>1707.5</td><td>176.9</td><td>Florida State</td><td>32</td><td>Hawai'i</td><td>26.1</td><td>Purdue</td><td>37</td></tr>
+</table>
+
+<hr style="height:2px;background: black;">
+<h2 style="text-align:center;font-size: 32px;"> <a name="Current_Team_Power"> </a> Current (Week 7) College Team Power Rating </h2>
+<p style = "text-align:center; margin-left: 50px;margin-right:50px"> Return to <a href="#Top_of_page"> Top</a></p>
+
+<table style="width: 30%;font-size: 12px;margin-right:auto;margin-left: auto">
+<tr><td><b>Rank</b></td><td><b>School</b></td><td><b>Rating</b></td></tr>
+<tr><td>1</td><td>Georgia</td><td>20.13</td></tr>
+<tr><td>2</td><td>Cincinnati</td><td>17.94</td></tr>
+<tr><td>3</td><td>CoastalCarolina</td><td>17.03</td></tr>
+<tr><td>4</td><td>OhioState</td><td>16.41</td></tr>
+<tr><td>5</td><td>Alabama</td><td>15.22</td></tr>
+<tr><td>6</td><td>Oklahoma</td><td>15.07</td></tr>
+<tr><td>7</td><td>MichiganState</td><td>14.77</td></tr>
+<tr><td>8</td><td>Pitt</td><td>14.75</td></tr>
+<tr><td>9</td><td>Baylor</td><td>14.41</td></tr>
+<tr><td>10</td><td>Michigan</td><td>12.37</td></tr>
+<tr><td>11</td><td>WakeForest</td><td>12.34</td></tr>
+<tr><td>12</td><td>AirForce</td><td>11.40</td></tr>
+<tr><td>13</td><td>OleMiss</td><td>11.06</td></tr>
+<tr><td>14</td><td>UTSA</td><td>10.98</td></tr>
+<tr><td>15</td><td>UCLA</td><td>10.40</td></tr>
+<tr><td>16</td><td>Oregon</td><td>10.14</td></tr>
+<tr><td>17</td><td>Iowa</td><td>9.99</td></tr>
+<tr><td>18</td><td>IowaState</td><td>8.91</td></tr>
+<tr><td>19</td><td>NorthCarolinaState</td><td>8.89</td></tr>
+<tr><td>20</td><td>ArizonaState</td><td>8.70</td></tr>
+<tr><td>21</td><td>SMU</td><td>8.52</td></tr>
+<tr><td>22</td><td>SanDiegoState</td><td>7.73</td></tr>
+<tr><td>23</td><td>PennState</td><td>7.45</td></tr>
+<tr><td>24</td><td>WesternMichigan</td><td>7.17</td></tr>
+<tr><td>25</td><td>Auburn</td><td>7.13</td></tr>
+<tr><td>26</td><td>TexasTech</td><td>6.68</td></tr>
+<tr><td>27</td><td>Nevada</td><td>6.51</td></tr>
+<tr><td>28</td><td>Houston</td><td>6.15</td></tr>
+<tr><td>29</td><td>OregonState</td><td>6.07</td></tr>
+<tr><td>30</td><td>Liberty</td><td>6.00</td></tr>
+<tr><td>31</td><td>Army</td><td>5.68</td></tr>
+<tr><td>32</td><td>NorthCarolina</td><td>5.50</td></tr>
+<tr><td>33</td><td>Kentucky</td><td>5.11</td></tr>
+<tr><td>34</td><td>NotreDame</td><td>5.03</td></tr>
+<tr><td>35</td><td>BYU</td><td>4.92</td></tr>
+<tr><td>36</td><td>Minnesota</td><td>4.67</td></tr>
+<tr><td>37</td><td>OklahomaState</td><td>4.65</td></tr>
+<tr><td>38</td><td>UTEP</td><td>4.36</td></tr>
+<tr><td>39</td><td>Texas</td><td>4.29</td></tr>
+<tr><td>40</td><td>Virginia</td><td>4.15</td></tr>
+<tr><td>41</td><td>Louisiana</td><td>4.07</td></tr>
+<tr><td>42</td><td>TexasA&amp;</td><td>3.79</td></tr>
+<tr><td>43</td><td>Toledo</td><td>3.76</td></tr>
+<tr><td>44</td><td>SouthAlabama</td><td>3.75</td></tr>
+<tr><td>45</td><td>Nebraska</td><td>3.63</td></tr>
+<tr><td>46</td><td>Arkansas</td><td>3.56</td></tr>
+<tr><td>47</td><td>TexasChristian</td><td>3.33</td></tr>
+<tr><td>48</td><td>UAB</td><td>3.26</td></tr>
+<tr><td>49</td><td>Purdue</td><td>3.24</td></tr>
+<tr><td>50</td><td>Tennessee</td><td>3.14</td></tr>
+</table>
+
+
+<hr style="height:2px;background: black;">
+<h2 style="text-align:center;font-size: 32px;"> <a name="Current_Player_Power"> </a> Current (Week 7) Player Performance Rankings </h2>
+<p style = "text-align:center; margin-left: 50px;margin-right:50px"> Return to <a href="#Top_of_page"> Top</a></p>
+
+<table style="width: 90%;font-size: 12px;margin-right:auto;margin-left: auto">
+<tr> <th style="background-color: White"><b>Rank</b></th> <th colspan="3"><b>Running Backs</b></th> <th colspan="3"><b>Wide Receiver</b></th> <th colspan="3"><b>Quarterback</b></th> <th colspan="3"><b>Defensive Player</b></th></tr>
+<tr><td>#</td><td><b>Name</b></td><td><b>School</b> </td><td><b>Rating</b></td><td><b>Name</b></td><td><b>School</b> </td><td><b>Rating</b></td><td><b>Name</b></td><td><b>School</b> </td><td><b>Rating</b></td><td><b>Name</b></td><td><b>School</b> </td><td><b>Rating</b></td></tr>
+
+<tr><td>1</td><td>KennethWalkerIII</td><td>MichiganState</td><td>7.71</td><td>CalvinAustinIII</td><td>Memphis</td><td>6.21</td><td>BaileyZappe</td><td>WesternKentucky</td><td>7.58</td><td>Ja'QuanMcMillian</td><td>EastCarolina</td><td>22.34</td></tr>
+<tr><td>2</td><td>AbramSmith</td><td>Baylor</td><td>7.68</td><td>JerrethSterns</td><td>WesternKentucky</td><td>5.98</td><td>KennyPickett</td><td>Pitt</td><td>7.09</td><td>DevinLloyd</td><td>Utah</td><td>21.44</td></tr>
+<tr><td>3</td><td>JeromeFord</td><td>Cincinnati</td><td>7.59</td><td>JacobCowing</td><td>UTEP</td><td>5.31</td><td>MattCorral</td><td>OleMiss</td><td>6.28</td><td>ChadMuma</td><td>Wyoming</td><td>19.51</td></tr>
+<tr><td>4</td><td>BijanRobinson</td><td>Texas</td><td>7.52</td><td>DontayvionWicks</td><td>Virginia</td><td>5.24</td><td>GraysonMcCall</td><td>CoastalCarolina</td><td>5.87</td><td>DiegoFagot</td><td>Navy</td><td>18.19</td></tr>
+<tr><td>5</td><td>TreVeyonHenderson</td><td>OhioState</td><td>7.34</td><td>JoshDowns</td><td>NorthCarolina</td><td>5.07</td><td>BryceYoung</td><td>Alabama</td><td>5.54</td><td>RileyMoss</td><td>Iowa</td><td>17.88</td></tr>
+<tr><td>6</td><td>SeanTucker</td><td>Syracuse</td><td>7.09</td><td>DevinThompkins</td><td>UtahState</td><td>4.77</td><td>TannerMordecai</td><td>SMU</td><td>4.74</td><td>SamWilliams</td><td>OleMiss</td><td>17.49</td></tr>
+<tr><td>7</td><td>RasheenAli</td><td>Marshall</td><td>6.68</td><td>JordanAddison</td><td>Pitt</td><td>4.71</td><td>MalikCunningham</td><td>Louisville</td><td>4.64</td><td>DarrenAnders</td><td>BowlingGreenState</td><td>16.93</td></tr>
+<tr><td>8</td><td>B.J.Baylor</td><td>OregonState</td><td>6.19</td><td>JamesonWilliams</td><td>Alabama</td><td>4.27</td><td>BrennanArmstrong</td><td>Virginia</td><td>4.58</td><td>JaylanFoster</td><td>SouthCarolina</td><td>16.77</td></tr>
+<tr><td>9</td><td>BreeceHall</td><td>IowaState</td><td>5.96</td><td>IsaiahLikely</td><td>CoastalCarolina</td><td>4.26</td><td>C.J.Stroud</td><td>OhioState</td><td>4.45</td><td>VinceSanford</td><td>AirForce</td><td>16.07</td></tr>
+<tr><td>10</td><td>MataeoDurant</td><td>Duke</td><td>5.95</td><td>JaydenReed</td><td>MichiganState</td><td>3.80</td><td>GerryBohanon</td><td>Baylor</td><td>4.44</td><td>KhouryBethley</td><td>Hawaii</td><td>15.89</td></tr>
+<tr><td>11</td><td>TylerBadie</td><td>Missouri</td><td>5.78</td><td>XavierWorthy</td><td>Texas</td><td>3.56</td><td>AdrianMartinez</td><td>Nebraska</td><td>4.40</td><td>MalcolmRodriguez</td><td>OklahomaState</td><td>15.78</td></tr>
+<tr><td>12</td><td>KennedyBrooks</td><td>Oklahoma</td><td>5.52</td><td>DontarioDrummond</td><td>OleMiss</td><td>3.37</td><td>CarsonStrong</td><td>Nevada</td><td>4.23</td><td>ReedBlankenship</td><td>MiddleTennesseeState</td><td>15.74</td></tr>
+<tr><td>13</td><td>KeatonMitchell</td><td>EastCarolina</td><td>5.13</td><td>DrakeLondon</td><td>USC</td><td>3.35</td><td>HendonHooker</td><td>Tennessee</td><td>4.15</td><td>TreyBaldwin</td><td>LouisianaTech</td><td>15.20</td></tr>
+<tr><td>14</td><td>ZachCharbonnet</td><td>UCLA</td><td>5.13</td><td>JalenNailor</td><td>MichiganState</td><td>3.32</td><td>WillRogers</td><td>MississippiState</td><td>4.05</td><td>D'MarcoJackson</td><td>AppalachianState</td><td>14.62</td></tr>
+<tr><td>15</td><td>BlakeCorum</td><td>Michigan</td><td>4.96</td><td>JalenTolbert</td><td>SouthAlabama</td><td>3.28</td><td>JakeHaener</td><td>FresnoState</td><td>3.73</td><td>IssiahNixon</td><td>TexasState</td><td>14.53</td></tr>
+<tr><td>16</td><td>ZachEvans</td><td>TexasChristian</td><td>4.94</td><td>DavidBell</td><td>Purdue</td><td>3.28</td><td>DevinLeary</td><td>NorthCarolinaState</td><td>3.70</td><td>OlakunleFatukasi</td><td>Rutgers</td><td>14.37</td></tr>
+<tr><td>17</td><td>ChristopherRodriguezJr.</td><td>Kentucky</td><td>4.91</td><td>GarrettWilson</td><td>OhioState</td><td>3.15</td><td>DesmondRidder</td><td>Cincinnati</td><td>3.28</td><td>PraiseAmaewhule</td><td>UTEP</td><td>14.23</td></tr>
+<tr><td>18</td><td>ReeseWhite</td><td>CoastalCarolina</td><td>4.85</td><td>JaivonHeiligh</td><td>CoastalCarolina</td><td>3.09</td><td>FrankHarris</td><td>UTSA</td><td>3.23</td><td>JustinRice</td><td>UtahState</td><td>14.15</td></tr>
+<tr><td>19</td><td>BradRoberts</td><td>AirForce</td><td>4.75</td><td>JalenCropper</td><td>FresnoState</td><td>3.07</td><td>SamHartman</td><td>WakeForest</td><td>3.21</td><td>JackCampbell</td><td>Iowa</td><td>14.15</td></tr>
+<tr><td>20</td><td>DeandreTorrey</td><td>NorthTexas</td><td>4.69</td><td>TreylonBurks</td><td>Arkansas</td><td>2.95</td><td>MalikWillis</td><td>Liberty</td><td>3.16</td><td>JustinWright</td><td>Tulsa</td><td>14.14</td></tr>
 </table>
 
 
